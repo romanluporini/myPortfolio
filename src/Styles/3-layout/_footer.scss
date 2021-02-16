@@ -1,0 +1,28 @@
+@import "../0-abstracts/vars";
+@import "../0-abstracts/mixins";
+
+.footer {
+  background-color: $f-background;
+  padding: 30px;
+  $self: &;
+  &__grid-item {
+    @include display-flex($direction: row);
+    .arrow-button {
+      transform: rotate(180deg);
+      margin: 25px 0;
+    }
+    .git-icon,
+    .li-icon {
+        width: 25px;
+        height: 25px;
+        margin: 8px;
+      path {
+        fill: $f-icon;
+      }
+    }
+    #{$self}__copy-right {
+      min-width: max-content;
+      @include font($color: $f-text, $family:"montserrat", $transform:capitalize);
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 64px;
+    label {
+      font-family: "montserrat",sans-serif;
+      font-weight: 300;
+      width: auto;
+      font-size: 1em;
+      color: rgba($color: $black, $alpha: 0.7);
+      font-weight: 400;
+      text-align: left;
+      text-transform: capitalize;
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      pointer-events: none;
+    }
+  input {
+    appearance: none;
+    outline: none;
+    border: none;
+    font-family: "montserrat",sans-serif;
+    font-weight: 300;
+    height: 54px;
+    width: 100%;
+    font-size: 1em;
+    border-radius: 4px;
+    border: 2px solid rgba($black, 0.2);
+    padding: 0 0 4px 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    &:focus,
+    &:valid {
+      border-color: $c-subtitle;
+      & ~ label {
+        transform: translate(0px, -32px);
+        transition: ease-in 0.3s;
+        color: $c-subtitle;
+        font-size: 0.8em;
+        font-weight: 400;
+        background-color: $white;
+        padding: 0 4px;
+        &::after{
+          content: ' *';
+          color: $button;
+        }
+      }
+    }
+    &::-webkit-inner-spin-button,
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+}

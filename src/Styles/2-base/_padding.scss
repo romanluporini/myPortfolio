@@ -1,0 +1,12 @@
+@import '../0-abstracts/mixins';
+@import './paddingList';
+
+.home .header-content,
+.about-me,
+.freelance,
+.portfolio,
+.resume,
+.contact{
+    @include padding($padding-list, $breakpoints);
+}
+

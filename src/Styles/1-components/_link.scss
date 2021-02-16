@@ -1,0 +1,15 @@
+.link {
+  display: none;
+  @include netbook {
+    position: relative;
+    top: 20px;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: $nav-links;
+    filter: drop-shadow(1px 1px 1px #000);
+  }
+}

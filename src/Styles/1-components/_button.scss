@@ -1,0 +1,19 @@
+@import "../0-abstracts/vars";
+
+.button {
+  border-radius: 40px !important;
+  width: 200px !important;
+  a {
+    text-decoration: none;
+    color: $white;
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    text-transform: lowercase;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+  svg{
+    margin-right: 6px;
+  }
+}

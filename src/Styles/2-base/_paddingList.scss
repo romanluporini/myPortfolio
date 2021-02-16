@@ -1,0 +1,15 @@
+$breakpoints: (
+  tablet: 768px,
+  netbook: 1024px,
+  notebook: 1240px,
+  desktop: 1440px,
+);
+
+$padding-list:(
+    null: 30px,
+    tablet: 30px 60px,
+    netbook: 30px 60px,
+    notebook: 30px 90px,
+    desktop: 30px 120px,
+);
+

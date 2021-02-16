@@ -1,0 +1,23 @@
+@import "../0-abstracts/vars";
+@import "../0-abstracts/mixins";
+
+.arrow-button {
+  @include display-flex($width: 60px, $height: 60px);
+  border-radius: 50%;
+  background-color: $arrow-button;
+  svg {
+    width: 1.5em !important;
+    height: 1.5em;
+    path {
+      fill: $white;
+    }
+  }
+  &:hover{
+    cursor: pointer;
+    svg{
+      transition: 0.3s;
+      width: 2em !important;
+      height: 2em;
+    }
+  }
+}

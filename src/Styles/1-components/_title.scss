@@ -1,0 +1,18 @@
+@import '../0-abstracts/vars';
+@import '../0-abstracts/mixins';
+@import '../2-base/typography';
+
+.title{
+    @include display-flex($align:flex-start);
+    margin-bottom: 25px;
+    h1{
+        @include font($color: $white, $weight:500, $transform: uppercase, $family: "roboto") 
+    }
+    h6{
+        @include font($color: $white, $weight:300, $transform: uppercase, $family: "montserrat")
+    }
+    hr{
+        width: 100%;
+        border: 0.01em solid;
+    }
+}

@@ -1,0 +1,90 @@
+@import '../0-abstracts/vars';
+
+/*Media queries mixins*/
+@mixin min-width($min-width) {
+  @media screen and (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin big-phone {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin netbook {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin notebook {
+  @media screen and (min-width: 1240px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin display-flex(
+  $width: 100%,
+  $height: auto,
+  $direction: column,
+  $justify: center,
+  $align: center
+) {
+  display: flex;
+  width: $width;
+  height: $height;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin font($color: $white, $weight:500, $transform: uppercase, $family: "roboto") {
+  font-family: $family, sans-serif;
+  text-transform: $transform;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    } @else {
+      // If $fs-font-size is a key that exists in
+      // $fs-breakpoints, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+@mixin padding($padding-map, $padd-breakpoints: $breakpoints){
+  @each $padd-breakpoint, $padding-value in $padding-map {
+    @if $padd-breakpoint == null {
+      padding: $padding-value;
+    } @else {
+      // If $fs-font-size is a key that exists in
+      // $fs-breakpoints, use the value
+      @if map-has-key($padd-breakpoints, $padd-breakpoint) {
+        $padd-breakpoint: map-get($padd-breakpoints, $padd-breakpoint);
+      }
+      @media screen and (min-width: $padd-breakpoint) {
+        padding: $padding-value;
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+$breakpoints: (
+  big-phone: 480px,
+  tablet: 768px,
+  netbook: 1024px,
+  notebook: 1240px,
+  desktop: 1440px,
+);
+
+$a-font-sizes:(
+  null: 1em,
+  big-phone: 1em,
+  tablet: 1em,
+);
+
+$button-font-sizes:(
+  null: 1.1em,
+  big-phone: 1.1em,
+  tablet: 1.2em,
+  netbook: 1.2em,
+  notebook: 1.2em,
+  desktop: 1.2em,
+);
+
+$p-font-sizes: (
+  null: 1em,
+  big-phone: 1em,
+  tablet: 1em,
+  netbook: 1.1em,
+  notebook: 1.1em,
+  desktop: 1.2em,
+);
+
+$h1-font-sizes: (
+  null: 1.2em,
+  big-phone: 1.2em,
+  tablet: 1.5em,
+  netbook: 2em,
+  notebook: 2.5em,
+  desktop: 2.5em,
+);
+
+$h1-header-title: (
+  null: 3.5em,
+  big-phone: 3.5em,
+  tablet: 4em,
+  netbook: 4em,
+  notebook: 5em,
+  desktop: 6em,
+);
+
+$h3-font-sizes: (
+  null: 1em,
+  big-phone: 1em,
+  tablet: 1.3em,
+  netbook: 1.4em,
+  notebook: 1.5em,
+  desktop: 1.6em,
+);
+
+$h4-font-sizes: (
+  null: 1em,
+  big-phone: 1em,
+  tablet: 1.3em,
+  netbook: 1.4em,
+  notebook: 1.5em,
+  desktop: 1.6em,
+);
+
+$h4-header-subtitle: (
+  null: 1.2em,
+  big-phone: 1.2em,
+  tablet: 1.3em,
+  netbook: 1.4em,
+  notebook: 1.5em,
+  desktop: 1.6em,
+);
+
+$h6-font-sizes: (
+  null: 0.8em,
+  big-phone: 0.9em,
+  tablet: 1em,
+  netbook: 1.1em,
+  notebook: 1.2em,
+  desktop: 1.3em,
+);
+
+

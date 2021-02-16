@@ -1,0 +1,81 @@
+@import "../../Styles/0-abstracts/vars";
+@import "../../Styles/0-abstracts/mixins";
+
+.resume {
+  background-color: $r-background;
+  $self: &;
+  padding: 30px;
+  &__grid-container {
+    #{$self}__grid-item {
+      padding-bottom: 16px;
+      margin-bottom: 25px;
+      &:nth-child(5){
+        margin-bottom: unset;
+      }    
+      @include min-width(600px) {
+        margin-bottom: unset;
+        &:nth-child(1),
+        &:nth-child(2) {
+          padding-bottom: 16px;
+        }
+        &:nth-child(odd) {
+          border-left: 1px solid $r-section-title;
+          padding-left: 15px;
+        }
+        &:nth-child(even) {
+          border-right: 1px solid $r-section-title;
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+  .title {
+    h1 {
+      @include font($color: $r-title);
+    }
+    h6 {
+      @include font($color: $r-subtitle, $weight: 300);
+    }
+    hr {
+      border-color: $r-subtitle;
+    }
+  }
+  &__section {
+    #{$self}__section-title {
+      @include font($color: rgba($r-section-title, 0.8), $weight: 400);
+      margin-bottom: 8px;
+    }
+    .text {
+      p {
+        @include font(
+          $color: rgba($r-title, 1),
+          $weight: 400,
+          $transform: none,
+          $family: "Montserrat"
+        );
+        line-height: 1.5em;
+      }
+      span {
+        @include font(
+          $color: $r-title,
+          $weight: 600,
+          $transform: none,
+          $family: "Montserrat"
+        );
+        display: inline-block;
+        margin-bottom: 4px;
+        margin-top: 12px;
+        &:first-of-type {
+          margin-top: 4px;
+        }
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+  &__button-box {
+    @include display-flex;
+    margin-top: 50px;
+  }
+}
