@@ -1,76 +1,79 @@
-@import '../0-abstracts/vars';
+@import "../0-abstracts/vars";
 @import "../2-base/padding";
 
-.about-me{
-    @include display-flex($width:auto);
-    background-color: $a-background;
-    padding: 30px;
-    $self: &;
-    &__header{
-        @include display-flex($direction:row, $justify: flex-start);
-        .title {
-            h1 {
-              color: $a-title;
-            }
-            h6 {
-              color: $a-subtitle;
-            }
-            hr {
-              border-color: $a-subtitle;
-            }
-        }
-        #{$self}__profile-photo{
-            @include display-flex($width: 50px, $height: 50px, $align:flex-start);
-            margin: 0 10px 25px 0;
-            @include netbook{
-                width: 75px;
-                height: 75px;
-            }
-            img{
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                @include netbook{
-                    width: 75px;
-                    height: 75px;
-                }
-            }
-        }
+.about-me {
+  @include display-flex($width: auto);
+  background-color: $a-background;
+  padding: 30px;
+  $self: &;
+  &__header {
+    @include display-flex($direction: row, $justify: flex-start);
+    .title {
+      h1 {
+        color: $a-title;
+      }
+      h6 {
+        color: $a-subtitle;
+      }
+      hr {
+        border-color: $a-subtitle;
+      }
     }
-    &__text{
-        @include display-flex;
-        p{
-            @include font($color:$a-text, $weight:400, $transform: none);
-            text-align: center;
-            line-height: 2em;
-            @include tablet{
-                text-align: justify;
-                line-height: 1.7em;
-            }
+    #{$self}__profile-photo {
+      @include display-flex($width: 50px, $height: 50px, $align: flex-start);
+      margin: 0 10px 25px 0;
+      @include netbook {
+        width: 75px;
+        height: 75px;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+        @include netbook {
+          width: 75px;
+          height: 75px;
         }
+      }
     }
-    &__links{
-        @include display-flex($direction: row);
-        margin-top: 25px;
-        #{$self}__link{
-            @include display-flex($width:40px, $height:40px);
-            &:active{
-                display: none;
-            }
-            a{
-                width: 100%;
-                text-align: center;
-                .git-icon{
-                    width: calc(100% - 12.5px);
-                    height: auto;
-                    color: $black;
-                }
-                .li-icon{
-                    width: 100%;
-                    height: auto;
-                    color: $linked-in;
-                }
-            }
+  }
+  &__text {
+    @include display-flex;
+    p {
+      @include font($color: $a-text, $weight: 400, $transform: none);
+      text-align: center;
+      line-height: 2em;
+      @include tablet {
+        text-align: justify;
+        line-height: 1.7em;
+      }
+    }
+  }
+  &__links {
+    @include display-flex($direction: row);
+    margin-top: 25px;
+    #{$self}__link {
+      @include display-flex($width: 40px, $height: 40px);
+      a {
+        width: 100%;
+        text-align: center;
+        &:hover {
+          transform: scale(1.2);
+          transition: 0.3s;
         }
+        .git-icon {
+          width: calc(100% - 12.5px);
+          height: auto;
+          color: $black;
+        }
+        .li-icon {
+          width: 100%;
+          height: auto;
+          color: $linked-in;
+        }
+      }
     }
+  }
 }

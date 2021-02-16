@@ -1,13 +1,12 @@
 import React from 'react'
 // import Button from './components/Button'
+import Grid from '@material-ui/core/Grid';
 import Title from '../components/Title'
 import { Button, Paper } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import '../Styles/3-layout/_resume.scss'
 import '../Styles/1-components/_button.scss'
-import Grid from '@material-ui/core/Grid';
-import { getResume } from '../Helpers/helpers'
 
 function Resume() {
     return (
@@ -105,7 +104,7 @@ function Resume() {
                     <div className="resume__button-box">
                         <Button variant="contained" color="secondary" className="button">
                             <FontAwesomeIcon icon={faDownload} />
-                            <a href="../Assets/Resume/resume.pdf" onClick={getResume}>
+                            <a href="https://github.com/romanluporini/portfolio/files/5989207/CV.Luporini.-.Full.Stack.Web.developer.pdf" download="CV Luporini - Full Stack Web Developer">
                                 resume
                             </a>
                         </Button>

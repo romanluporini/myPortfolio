@@ -46,7 +46,7 @@ function Home() {
         </div>
       </div>
       <div className="arrow-button-box">
-        <ArrowButton />
+        <ArrowButton scrollTo={'about'}/>
       </div>
     </div>
   );

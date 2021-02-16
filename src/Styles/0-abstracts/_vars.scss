@@ -2,7 +2,7 @@
 $white: #fff;
 $black: #000;
 $button: #F50057;
-$arrow-button: #4586FF;
+$arrow-button: #1F89FC;
 $linked-in: #0E76A8;
 
 /*Home*/
@@ -12,9 +12,9 @@ $h-title: #01ECD5;
 $h-subtitle: #F5F5F5;
 
 /*About*/
-$a-background: #F7F7F7;
-$a-title: #32424A;
-$a-subtitle: #0F4C75;
+$a-background: $white;
+$a-title: $black;
+$a-subtitle: $linked-in;
 $a-text: $a-title;
 
 /*Freelancer*/
@@ -42,7 +42,7 @@ $r-text:$r-title;
 
 /*Contact*/
 $c-background: $white;
-$c-title: #32424A;
+$c-title: $black;
 $c-subtitle: #1F89FC;
 $c-border: #32424A;
 $c-input: $black;

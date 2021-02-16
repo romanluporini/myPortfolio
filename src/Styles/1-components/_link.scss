@@ -1,15 +1,17 @@
+@import '../0-abstracts/vars';
+@import '../0-abstracts/mixins';
+
 .link {
+  position: relative;
+  top: 20px;
+  @include font($color: $nav-links, $weight:500, $transform: capitalize, $family: "montserrat");
+  font-size: 1.1em;
+  text-decoration: none;
+  filter: drop-shadow(1px 1px 1px #000);
+
   display: none;
+  
   @include netbook {
-    position: relative;
-    top: 20px;
     display: block;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 1.1em;
-    text-decoration: none;
-    text-transform: capitalize;
-    color: $nav-links;
-    filter: drop-shadow(1px 1px 1px #000);
   }
 }

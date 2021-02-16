@@ -10,11 +10,15 @@ function Footer() {
         <footer className="footer">
             <Grid container spacing={2}>
                 <Grid item xs={12} className="footer__grid-item">
-                    <ArrowButton />
+                    <ArrowButton scrollTo={'home'} />
                 </Grid>
                 <Grid item xs={12} className="footer__grid-item">
-                    <FontAwesomeIcon icon={faGithub} className="git-icon" />
-                    <FontAwesomeIcon icon={faLinkedin} className="li-icon" />
+                    <a href="https://github.com/romanluporini" target="_blank">
+                        <FontAwesomeIcon icon={faGithub} className="git-icon" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/romanluporini" target="_blank">
+                        <FontAwesomeIcon icon={faLinkedin} className="li-icon" />
+                    </a>
                 </Grid>
                 <Grid item xs={12} className="footer__grid-item">
                     <p className="footer__copy-right">roman luporini - copyright &#169; 2021</p>
