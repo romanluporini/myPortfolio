@@ -5,8 +5,9 @@
 }
 html{
     scroll-behavior: smooth;
-    body{
+    .App{
         overflow-x: hidden;
+        min-width: 320px;
     }
 }
 

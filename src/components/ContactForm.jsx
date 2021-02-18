@@ -6,7 +6,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 function ContactForm(props) {
     return (
         <form noValidate autoComplete="off" className="contact__form" onSubmit={props.submit}>
-            <Grid container spacing={2}>
+            <Grid container spacing={0 , 2}>
                 <Grid item xs={12} sm={6}>
                     <div className="input-box">
                         <input type="text" name="from_name" required />

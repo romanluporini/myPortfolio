@@ -3,7 +3,6 @@
 
 .footer {
   background-color: $f-background;
-  padding: 30px;
   $self: &;
   &__grid-item {
     @include display-flex($direction: row);

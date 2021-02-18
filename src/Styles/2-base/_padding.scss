@@ -6,7 +6,8 @@
 .freelance,
 .portfolio,
 .resume,
-.contact{
+.contact,
+.footer{
     @include padding($padding-list, $breakpoints);
 }
 

@@ -1,0 +1,20 @@
+@import '../0-abstracts/vars';
+@import '../0-abstracts/mixins';
+
+.floating-button-add{
+    @include display-flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $button;
+    position: absolute;
+    top: 90vh;
+    right: 5vh;
+    &:hover{
+        cursor: pointer;
+    }
+    p{
+        @include font($transform:none);
+        font-size: 1em;
+    }
+}

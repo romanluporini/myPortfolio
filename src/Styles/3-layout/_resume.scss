@@ -14,9 +14,9 @@
       }    
       @include min-width(600px) {
         margin-bottom: unset;
-        &:nth-child(1),
-        &:nth-child(2) {
-          padding-bottom: 16px;
+        &:nth-child(2),
+        &:nth-child(3) {
+          padding-bottom: 30px;
         }
         &:nth-child(odd) {
           border-left: 1px solid $r-section-title;

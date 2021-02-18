@@ -4,11 +4,9 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import '../Styles/1-components/_arrowButton.scss'
 
 export default function ArrowButton(props) {
-    
-    const scrollInfo  = props.scrollTo;
 
     const scroll = () => {
-        switch (scrollInfo) {
+        switch (props.scrollTo) {
             case 'about':
                 return '#about'
             case 'home':

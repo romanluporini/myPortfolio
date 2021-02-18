@@ -1,35 +1,23 @@
 import React from "react";
+import Nav from "../components/Nav";
 import ArrowButton from '../components/ArrowButton'
+import TypeWriter from '../Helpers/TypeWriter'
 import { Button } from '@material-ui/core';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Drawer from '../components/Drawer';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faChevronLeft, faTimes } from "@fortawesome/free-solid-svg-icons";
+import '../Styles/0-abstracts/_vars.scss'
 import '../Styles/2-base/_typography.scss'
 import '../Styles/1-components/_button.scss'
 import '../Styles/3-layout/_home.scss'
+import FloatingButtonAdd from "../components/FloatingButtonAdd";
 
 function Home() {
   return (
     <div className="home" id="home">
       <div className="to-filter"></div>
-      <nav>
-        <div className="menu-list">
-          <a href="#home" className="link">home</a>
-          <a href="#about" className="link">about</a>
-          <a href="#freelance" className="link">freelance</a>
-          <a href="#portfolio" className="link">portfolio</a>
-          <a href="#resume" className="link">resume</a>
-          <a href="#contact" className="link">contact</a>
-        </div>
-      </nav>
+      <Nav queryFlag={false} />
       <div className="header-content">
-        <h1 className="header-content__title">
-          {'Think > Plan > Execute'} <span>.</span>
-        </h1>
+        <TypeWriter />
         <h4 className="header-content__subtitle">
-          Hello, my name is <span>Román</span>. I'm a <span> Full Stack Web Developer</span> based in
+          My name is <span>Román Luporini</span>. I'm a <span> Full Stack Web Developer</span> based in
           Argentina.
         </h4>
         <div className="buttons">
@@ -45,8 +33,11 @@ function Home() {
           </Button>
         </div>
       </div>
+      <div className="fab-box">
+        <FloatingButtonAdd />
+      </div>
       <div className="arrow-button-box">
-        <ArrowButton scrollTo={'about'}/>
+        <ArrowButton scrollTo={'about'} />
       </div>
     </div>
   );

@@ -6,6 +6,8 @@
   border-radius: 50%;
   background-color: $arrow-button;
   svg {
+    position: relative;
+    top: 2px;
     width: 1.5em !important;
     height: 1.5em;
     path {

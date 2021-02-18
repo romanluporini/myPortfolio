@@ -7,7 +7,7 @@ function Title(props) {
     const section = section => {
         switch (section) {
             case 'about me':
-                return { titleText: "Roman Luporini", subtitleText: "full stack web developer" };
+                return { titleText: "Roman Luporini", subtitleText: "about me" };
                 case 'freelance':
                     return {titleText: section, subtitleText: "services"}
                 case 'portfolio':
