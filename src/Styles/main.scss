@@ -1,14 +1,28 @@
-*{
-    margin: unset;
-    padding: unset;
-    box-sizing: border-box;
+@import '../Styles/0-abstracts/vars';
+* {
+  margin: unset;
+  padding: unset;
+  box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
-    .App{
-        overflow-x: hidden;
-        min-width: 320px;
-    }
+html {
+  scroll-behavior: smooth;
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background:$arrow-button;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: adjust-hue($color: $arrow-button, $degrees: 5);
+  }
+  #root {
+    overflow-x: hidden;
+    min-width: 320px;
+  }
 }
 
-@import './3-layout/layoutGlobal'
+@import "./3-layout/layoutGlobal";

@@ -63,6 +63,9 @@
   }
   .fab-box{
     z-index: 2;
+    position: fixed;
+    top: 85vh;
+    right: 5vw;
   }
   .arrow-button-box {
     display: none;

@@ -8,7 +8,6 @@
     position: relative;
     border-radius: 10px;
     border: 1px solid $white;
-    padding: 4px 8px 8px 8px;
     margin-bottom: 16px;
     &:hover{
         transition: 2s;
@@ -17,8 +16,7 @@
     &__img{
         position: relative;
         bottom: 5px;
-        width: 200px;
-        height: 125px;
+        width: 100%;
         object-fit: cover;
         object-position: top center;
         margin-bottom: 8px;

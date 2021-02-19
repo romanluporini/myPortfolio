@@ -5,7 +5,7 @@ class TypeWriter extends React.Component {
     render() {
         return (
             <Typical
-                steps={[1000, "Hello!", 500, "Hello! I'm Román", 2000, "I'm a Web Developer"]}
+                steps={[1000, "Hello!", 500, "Hello! I'm Román", 1000, "I'm a Web Developer"]}
                 loop={1}
                 wrapper="h1"
                 className="header-content__title"
