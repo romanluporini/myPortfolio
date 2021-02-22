@@ -4,6 +4,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 // import profilePhoto from '../Assets/Images/profile-photo.png'
 import profilePhoto from '../Assets/Images/profile-photo.jpg'
+import TypeWriter from '../Helpers/TypeWriter';
 
 function AboutMe() {
     return (
@@ -25,14 +26,14 @@ function AboutMe() {
                     bcrypt, JWT, just to name a few.
                 </p>
             </div>
-            <div className="about-me__links">
+            {/* <div className="about-me__links">
                 <div className="about-me__link">
                     <a href="https://github.com/romanluporini" target="_blank"><GitHubIcon className="git-icon" /></a>
                 </div>
                 <div className="about-me__link">
                     <a href="https://www.linkedin.com/in/romanluporini" target="_blank"><LinkedInIcon className="li-icon" /></a>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

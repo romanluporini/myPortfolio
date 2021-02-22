@@ -1,0 +1,51 @@
+@import "../0-abstracts/mixins";
+@import "../0-abstracts/vars";
+
+.scroll {
+  $self: &;
+  &__box {
+    @include display-flex;
+    z-index: 2;
+  }
+  &__mouse {
+    position: absolute;
+    top: 85vh;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 30px;
+    border-radius: 15px;
+    border: 4px solid $white;
+    a{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    #{$self}__wheel {
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background-color: $white;
+      position: relative;
+      top: 8px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      animation: scroll-moving 0.6s ease-out 6s 10 alternate;
+    }
+  }
+}
+
+@keyframes scroll-moving {
+  from {
+    top: 8px;
+  }
+
+  to {
+    top: 30px;
+  }
+}

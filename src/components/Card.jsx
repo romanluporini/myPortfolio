@@ -2,6 +2,7 @@ import React from 'react'
 import projectImg1 from '../Assets/Images/bluedot.png';
 import projectImg2 from '../Assets/Images/gifos.png';
 import projectImg3 from '../Assets/Images/delilah.png';
+import projectImg4 from '../Assets/Images/egeria.jpg';
 import '../Styles/1-components/_card.scss'
 
 
@@ -14,6 +15,10 @@ function Card(props) {
                 return { title: 'GifOs', text: "Objectives: GIPHY's API conection, API querying, light/dark theme change, javascript ES6 (async/await) and media devices conection.", img: projectImg2 }
             case 'delilah-resto':
                 return { title: 'Delilah Resto', text: 'Objectives: API programming, SQL database creation and querying, user authentication with JWT, folder structure for project scaling.', img: projectImg3 }
+            case 'egeria':
+                return { title: 'Egeria', text: 'UX/UI design of international e-commerce', img: projectImg4 }
+            case 'delilah-resto':
+                return { title: 'Delilah Resto', text: 'Objectives: API programming, SQL database creation and querying, user authentication with JWT, folder structure for project scaling.', img: projectImg3 }
             default:
                 break;
         }
@@ -21,7 +26,9 @@ function Card(props) {
 
     return (
         <div className="card">
-            <img src={cardType(props.title).img} alt={cardType(props.title).title} className="card__img"/>
+            <div className="card__img--wrapper">
+                <img src={cardType(props.title).img} alt={cardType(props.title).title} className="card__img" />
+            </div>
             <div className="card__content">
                 <h3>{cardType(props.title).title}</h3>
                 <p>{cardType(props.title).text}</p>

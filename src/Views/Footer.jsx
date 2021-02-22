@@ -5,9 +5,16 @@ import { Grid } from '@material-ui/core'
 import ArrowButton from '../components/ArrowButton'
 
 
+
 function Footer() {
     return (
         <footer className="footer">
+            <div className="footer__Bg">
+                <div className="stars1"></div>
+                <div className="stars2"></div>
+                <div className="stars3"></div>
+            </div>
+            <div className="footer__Bg--filtered-layer"></div>
             <Grid container spacing={2}>
                 <Grid item xs={12} className="footer__grid-item">
                     <ArrowButton scrollTo={'home'} />

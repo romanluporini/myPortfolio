@@ -1,4 +1,4 @@
-@import '../0-abstracts/vars';
+@import "../0-abstracts/vars";
 
 /*Media queries mixins*/
 @mixin min-width($min-width) {
@@ -48,7 +48,12 @@
   align-items: $align;
 }
 
-@mixin font($color: $white, $weight:500, $transform: uppercase, $family: "roboto") {
+@mixin font(
+  $color: $white,
+  $weight: 500,
+  $transform: uppercase,
+  $family: "roboto"
+) {
   font-family: $family, sans-serif;
   text-transform: $transform;
   font-weight: $weight;
@@ -72,7 +77,7 @@
   }
 }
 
-@mixin padding($padding-map, $padd-breakpoints: $breakpoints){
+@mixin padding($padding-map, $padd-breakpoints: $breakpoints) {
   @each $padd-breakpoint, $padding-value in $padding-map {
     @if $padd-breakpoint == null {
       padding: $padding-value;

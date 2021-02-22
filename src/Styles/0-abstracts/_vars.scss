@@ -6,6 +6,7 @@ $arrow-button: #1F89FC;
 $linked-in: #0E76A8;
 
 /*Home*/
+$h-background: #006aff;
 $nav-links: $white;
 $nav-links-active: #01ECD5;
 $h-title: #01ECD5;
@@ -14,42 +15,42 @@ $h-subtitle: #F5F5F5;
 /*About*/
 $a-background: $white;
 $a-title: $black;
-$a-subtitle: $linked-in;
+$a-subtitle: $h-background;
 $a-text: $a-title;
 
 /*Freelancer*/
-$f-background: $black;
-$f-title: $white;
-$f-subtitle: #007AFF;
-$f-slide-title: $f-subtitle;
-$f-text: #FBF9FA;
-$f-bullets: $white;
-$f-bullets-active: #3CCA6C;
+$f-background: rgb(243, 245, 249);
+$f-title: $h-background;
+$f-subtitle: #32424A;
+$f-slide-title: $f-title;
+$f-text: $black;
+$f-bullets: $f-subtitle;
+$f-bullets-active: #01ECD5;
 
 /*Portfolio*/
 $p-background: #01ECD5;
 $p-title: $white;
-$p-subtitle: #32424A;
+$p-subtitle: $p-background;
 $p-card-title: $white;
 $p-card-text: $white;
 
 /*Resume*/
 $r-background: #32424A;
 $r-title: #FBF9FA;
-$r-subtitle: #3CCA6C;
+$r-subtitle: $p-background;
 $r-section-title: #AAA;
 $r-text:$r-title;
 
 /*Contact*/
 $c-background: $white;
 $c-title: $black;
-$c-subtitle: #1F89FC;
+$c-subtitle: $h-background;
 $c-border: #32424A;
 $c-input: $black;
 $c-required: $button;
 
 /*Footer*/
 $f-icon: #FBF9FA;
-$f-text: #FBF9FA;
-$f-background: $black;
+$ft-text: #FBF9FA;
+$ft-background: $black;
 

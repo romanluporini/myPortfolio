@@ -2,6 +2,7 @@ import React from 'react'
 import Typical from 'react-typical'
 
 class TypeWriter extends React.Component {
+
     render() {
         return (
             <Typical

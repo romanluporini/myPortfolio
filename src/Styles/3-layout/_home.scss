@@ -2,18 +2,31 @@
 @import "../0-abstracts/mixins";
 @import "../1-components/link";
 @import "../2-base/padding";
+@import "../../Assets/Animations/animationBg2";
 
 .home {
   @include display-flex($width: 100%, $height: 100vh);
-  background-image: url("../../Assets/Images/header-bg.jpg");
-  background-position: center 30%;
-  .to-filter {
-    background-color: rgba($color: #000000, $alpha: 0.5);
+  // background-image: url("../../Assets/Images/header-bg.jpg");
+  // background: $h-background;
+  // background: rgb(2,0,36);
+  // background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%);  // background: linear-gradient(90deg, $h-background, rgb(144,8,201));
+  // background-position: center 30%;
+  &__Bg {
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+    &--filtered-layer {
+      background-color: rgba($color: $h-background, $alpha: 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
   nav {
     @include display-flex($width: 60%, $direction: row, $justify: space-around);
@@ -61,7 +74,7 @@
       }
     }
   }
-  .fab-box{
+  .fab-box {
     z-index: 2;
     position: fixed;
     top: 85vh;

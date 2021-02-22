@@ -1,11 +1,31 @@
 @import "../0-abstracts/vars";
 @import "../0-abstracts/mixins";
+@import '../../Assets/Animations/_animationBg2';
 
 .footer {
-  background-color: $f-background;
+  position: relative;
+  background-color: $ft-background;
   $self: &;
+  &__Bg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+  }
+  &__Bg--filtered-layer{
+    background-color: rgba($color: $h-background, $alpha: 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   &__grid-item {
     @include display-flex($direction: row);
+    z-index: 2;
     .arrow-button {
       transform: rotate(180deg);
       margin: 25px 0;
@@ -25,7 +45,7 @@
     }
     #{$self}__copy-right {
       min-width: max-content;
-      @include font($color: $f-text, $family:"montserrat", $transform:capitalize);
+      @include font($color: $ft-text, $family:"montserrat", $transform:capitalize);
     }
   }
 }

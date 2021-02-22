@@ -10,14 +10,17 @@ html {
     width: 12px;
   }
   ::-webkit-scrollbar-track {
-    width: 10px;
+    // background: rgba($color: $h-background, $alpha: 0.5);
+    background: transparent;
+    box-shadow: inset 0.5px -0.5px 5px rgba($color: #000000, $alpha: 0.2);
   }
   ::-webkit-scrollbar-thumb {
-    background:$arrow-button;
+    background: lightgrey;
     border-radius: 6px;
+    width: 8px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: adjust-hue($color: $arrow-button, $degrees: 5);
+    background: adjust-hue($color: lightgrey, $degrees: 10);
   }
   #root {
     overflow-x: hidden;
