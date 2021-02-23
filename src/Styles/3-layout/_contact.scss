@@ -1,50 +1,44 @@
-@import '../0-abstracts/vars';
-@import '../1-components/_input';
+@import "../0-abstracts/vars";
+@import "../0-abstracts/mixins";
 @import "../2-base/padding";
+@import "../1-components/input";
+@import "../1-components/textArea";
 
-.contact{
-    color: $c-background;
-    $self: &;
-    .title{
-        h1{
-            color: $c-title;
-        }
-        h6{
-            color: $c-subtitle;
-        }
-        hr{
-            border-color: $c-subtitle;
-        }
+.contact {
+  color: $c-background;
+  $self: &;
+  .title {
+    h1 {
+      color: $c-title;
     }
-    &__form{
-        width: 100%;
-        .MuiOutlinedInput-input{
-            border-color: red;
-        }
-        #{$self}__name-input{
-            width: 100%;
-        }
-        #{$self}__email-input{
-            width: 100%;
-        }
-        #{$self}__email-body{
-            width: 100%;
-            padding: 18.5px 14px;
-            appearance: none;
-            outline: none;
-            border: 2px solid rgba($color: #000000, $alpha: 0.2);
-            border-radius: 4px;
-            font-family: "montserrat", sans-serif;
-            font-size: 1em;
-        }
-        #{$self}__email-body:focus,
-        #{$self}__email-body:valid
-        {
-            border-color: $c-subtitle;
-        }
+    h6 {
+      color: $c-subtitle;
     }
-    &__button-box{
-        @include display-flex;
-        margin-top: 50px;
+    hr {
+      border-color: $c-subtitle;
     }
+  }
+  &__form {
+    width: 100%;
+    .MuiOutlinedInput-input {
+      border-color: red;
+    }
+    #{$self}__name-input {
+      width: 100%;
+    }
+    #{$self}__email-input {
+      width: 100%;
+    }
+    #{$self}__email-body {
+      width: 100%;
+    }
+    #{$self}__email-body:focus,
+    #{$self}__email-body:valid {
+      border-color: $c-subtitle;
+    }
+  }
+  &__button-box {
+    @include display-flex;
+    margin-top: 50px;
+  }
 }

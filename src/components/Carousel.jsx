@@ -1,13 +1,14 @@
 import React from 'react'
 import Carousel from 'react-material-ui-carousel'
 import { Paper } from '@material-ui/core'
+import '../Styles/1-components/_carousel.scss'
 
 
 export default function freelanceCarousel(props) {
     var items = [
         {
             img: props.img.slide1,
-            title: 'interactive prototying',
+            title: 'interactive prototyping',
             text: 'Interactive prototyping is a trend in design. It allows the client to see the final product and to make changes before jump into code which make things a lot easier, speed up the work flow and deliver times.'
         },
         {
@@ -32,7 +33,7 @@ export default function freelanceCarousel(props) {
                     <div className="slide__text">
                         <h4>{props.item.title}</h4>
                         <p>
-                        {props.item.text}
+                            {props.item.text}
                         </p>
                     </div>
                 </div>

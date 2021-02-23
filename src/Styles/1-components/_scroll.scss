@@ -3,15 +3,7 @@
 
 .scroll {
   $self: &;
-  &__box {
-    @include display-flex;
-    z-index: 2;
-  }
   &__mouse {
-    position: absolute;
-    top: 85vh;
-    left: 50%;
-    transform: translateX(-50%);
     height: 50px;
     width: 30px;
     border-radius: 15px;

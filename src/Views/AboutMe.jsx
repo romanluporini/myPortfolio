@@ -1,10 +1,6 @@
 import React from 'react'
 import Title from '../components/Title'
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
-// import profilePhoto from '../Assets/Images/profile-photo.png'
-import profilePhoto from '../Assets/Images/profile-photo.jpg'
-import TypeWriter from '../Helpers/TypeWriter';
+import profilePhoto from '../Assets/Images/profile-photo.png'
 
 function AboutMe() {
     return (
@@ -17,23 +13,18 @@ function AboutMe() {
             </div>
             <div className="about-me__text">
                 <p>
-                    My name is Román Luporini and I'm a FSWD graduated from Acámica. I'm currently working at Sentate as a Full Stack Web
+                    I'm a FSWD graduated from Acámica. I'm currently working at Sentate as a Full Stack Web
                     Developer as well as I'm part-time freelancer. 
                     <br/>
                     I have 6 months of experience working with Sentate on a seat booking platform for companies administration Project.
                     The most relevant technologies are:
                     React-redux, JavaScript, MongoDB, CSS/Sass-SassCript (BEM - methodology), HTML5, GIT. Libraries/Modules like Express, Axios,
                     bcrypt, JWT, just to name a few.
+                    {/* <br/>
+                    <br/>
+                    I like to create the best web experience, that includes efficiency on the back as well as awsome interactions on the front. This portfolio has been made based on that, i hope you like it.  */}
                 </p>
             </div>
-            {/* <div className="about-me__links">
-                <div className="about-me__link">
-                    <a href="https://github.com/romanluporini" target="_blank"><GitHubIcon className="git-icon" /></a>
-                </div>
-                <div className="about-me__link">
-                    <a href="https://www.linkedin.com/in/romanluporini" target="_blank"><LinkedInIcon className="li-icon" /></a>
-                </div>
-            </div> */}
         </div>
     )
 }

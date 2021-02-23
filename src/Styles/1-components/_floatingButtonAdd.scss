@@ -10,6 +10,7 @@
   transition-timing-function: ease-in;
   transition-duration: 1s;
   opacity: 0;
+  z-index: 5;
   a {
     @include display-flex($height: 100%);
   }

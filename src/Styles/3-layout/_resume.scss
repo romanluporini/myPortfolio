@@ -42,16 +42,16 @@
   }
   &__section {
     #{$self}__section-title {
-      @include font($color: rgba($r-section-title, 0.8), $weight: 400);
+      @include font($color: rgba($r-section-title, 0.8), $weight: 400, $family:"poppins", $transform: capitalize);
       margin-bottom: 8px;
     }
     .text {
       p {
         @include font(
-          $color: rgba($r-title, 1),
-          $weight: 400,
+          $color: $r-title,
+          $weight: 300,
           $transform: none,
-          $family: "Montserrat"
+          $family: "roboto"
         );
         line-height: 1.5em;
       }
@@ -59,8 +59,8 @@
         @include font(
           $color: $r-title,
           $weight: 600,
-          $transform: none,
-          $family: "Montserrat"
+          $transform: uppercase,
+          $family: "poppins"
         );
         display: inline-block;
         margin-bottom: 4px;

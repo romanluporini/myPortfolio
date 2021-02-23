@@ -1,0 +1,17 @@
+@import "../0-abstracts/vars";
+@import "../0-abstracts/mixins";
+
+.contact__email-body {
+  @include font(
+    $color: $black,
+    $weight: 300,
+    $transform: none,
+    $family: "roboto"
+  );
+  padding: 18.5px 14px;
+  appearance: none;
+  outline: none;
+  border: 2px solid rgba($color: #000000, $alpha: 0.2);
+  border-radius: 4px;
+  font-size: 1em;
+}

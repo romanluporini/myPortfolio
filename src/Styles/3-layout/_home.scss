@@ -74,6 +74,14 @@
       }
     }
   }
+  .scroll__box {
+    @include display-flex;
+    z-index: 2;
+    position: absolute;
+    top: 80vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .fab-box {
     z-index: 2;
     position: fixed;
