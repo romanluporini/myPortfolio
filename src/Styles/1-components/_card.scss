@@ -6,12 +6,13 @@
     transform: none;
   }
   .card {
-    @include display-flex($width: 100% , $justify: flex-start);
+    @include display-flex($width: 100%, $justify: center);
     position: relative;
     transition: 1s ease-out;
     overflow: hidden;
     transform: translateX(400%);
-    @include tablet{
+    $self: &;
+    @include tablet {
       flex-direction: row;
     }
     &:hover {
@@ -27,17 +28,17 @@
       //   left: 0;
       // }
     }
-    &__img--wrapper{
+    &__img--wrapper {
       width: 100%;
       max-width: 400px;
       height: 200px;
       border: 2px solid white;
-      border-radius: 4px;  
-      @include tablet{
+      border-radius: 4px;
+      @include tablet {
         width: 300px;
         height: 200px;
       }
-      @include netbook{
+      @include netbook {
         width: 400px;
         height: 300px;
       }
@@ -54,20 +55,19 @@
       text-align: center;
       overflow: hidden;
       transition: 1s;
-      @include tablet{
+      @include tablet {
         text-align: right;
         width: 50%;
         margin-left: 16px;
       }
-      @include netbook{
-        //i've got to do React based media query
-        // mesurement to display the long text
-      }
-      h3 {
-        @include font($family: "poppins",$color: $p-card-title, $transform: none);
+      .card__title {
+        @include font(
+          $family: "poppins",
+          $color: $p-card-title,
+          $transform: none
+        );
         margin-bottom: 4px;
-        
-        @include netbook{
+        @include netbook {
           transform: rotateX(90deg);
         }
       }
@@ -78,12 +78,12 @@
           $transform: none,
           $family: "roboto"
         );
-        @include netbook{
+        @include netbook {
           transform: rotateX(-90deg);
         }
-        &:nth-of-type(2){
+        &:nth-of-type(2) {
           margin-top: 8px;
-          &::first-line{
+          &::first-line {
             font-weight: bold;
           }
         }
@@ -97,8 +97,7 @@
     transform: translateX(0%);
     transition-delay: 1s;
     .card__content h3,
-    .card__content p
-    {
+    .card__content p {
       transform: rotateX(0deg);
       transition: 1s;
       transition-delay: 2.2s;
@@ -108,7 +107,7 @@
     transform: translateX(0%);
     transition-delay: 1.2s;
     .card__content h3,
-    .card__content p{
+    .card__content p {
       transform: rotateX(0deg);
       transition: 1s;
       transition-delay: 2.4s;
@@ -118,7 +117,7 @@
     transform: translateX(0%);
     transition-delay: 1.4s;
     .card__content h3,
-    .card__content p{
+    .card__content p {
       transform: rotateX(0deg);
       transition: 1s;
       transition-delay: 2.6s;
@@ -128,7 +127,7 @@
     transform: translateX(0%);
     transition-delay: 1.6s;
     .card__content h3,
-    .card__content p{
+    .card__content p {
       transform: rotateX(0deg);
       transition: 1s;
       transition-delay: 2.8s;

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import useWindowDimensions from '../Hooks/useWindowDimensions'
 import projectImg1 from '../Assets/Images/bluedot.png';
 import projectImg2 from '../Assets/Images/gifos.png';
 import projectImg3 from '../Assets/Images/delilah.png';
@@ -8,7 +9,10 @@ import '../Styles/1-components/_card.scss'
 
 function Card(props) {
 
-    const query=false;
+    const { width } = useWindowDimensions();
+    if (width > 1024){
+        var query = true
+    }
 
     const cardType = (cardTitle) => {
         switch (cardTitle) {
@@ -33,7 +37,7 @@ function Card(props) {
                 <img src={cardType(props.title).img} alt={cardType(props.title).title} className="card__img" />
             </div>
             <div className="card__content">
-                <h3>{cardType(props.title).title}</h3>
+                <h3 className="card__title">{cardType(props.title).title}</h3>
                 <p>{query ? cardType(props.title).text : cardType(props.title).shortText}</p>
                 <p>{cardType(props.title).note}</p>
             </div>

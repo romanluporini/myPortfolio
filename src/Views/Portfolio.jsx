@@ -28,7 +28,7 @@ function Portfolio() {
             <div className="portfolio__Bg--filtered-layer"></div>
             <Title section="portfolio" />
             <div className="portfolio__cards">
-                <Grid container spacing={6} direction="column">
+                <Grid container spacing={6} direction="column" justify="center">
                     <Grid item xs={12}className={portfolioContent ? "portfolio__cards-item visited" : "portfolio__cards-item"}>
                         <Card title="bluedot-podcast" />
                     </Grid>
