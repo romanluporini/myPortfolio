@@ -4,14 +4,13 @@
 .resume {
   background-color: $r-background;
   $self: &;
-  padding: 30px;
   &__grid-container {
     #{$self}__grid-item {
       padding-bottom: 16px;
       margin-bottom: 25px;
-      &:nth-child(5){
+      &:nth-child(5) {
         margin-bottom: unset;
-      }    
+      }
       @include min-width(600px) {
         margin-bottom: unset;
         &:nth-child(2),
@@ -42,13 +41,21 @@
   }
   &__section {
     #{$self}__section-title {
-      @include font($color: rgba($r-section-title, 0.8), $weight: 400, $family:"poppins", $transform: capitalize);
+      @include font(
+        $color: $r-title,
+        $weight: 400,
+        $family: "poppins",
+        $transform: capitalize
+      );
       margin-bottom: 8px;
     }
     .text {
+      @include tablet {
+        padding-left: 8px;
+      }
       p {
         @include font(
-          $color: $r-title,
+          $color: $r-section-title,
           $weight: 300,
           $transform: none,
           $family: "roboto"
@@ -57,8 +64,8 @@
       }
       span {
         @include font(
-          $color: $r-title,
-          $weight: 600,
+          $color: rgba($r-title, 0.9),
+          $weight: 500,
           $transform: uppercase,
           $family: "poppins"
         );

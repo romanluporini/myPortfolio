@@ -40,7 +40,8 @@
   }
   &__cards {
     z-index: 2;
-    // transform: translateX(500%);
-    // @include display-flex;
+    @include tablet{
+      margin: 25px 0;
+    }  
   }
 }

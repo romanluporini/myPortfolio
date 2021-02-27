@@ -1,0 +1,43 @@
+@import "../0-abstracts/vars";
+@import "../0-abstracts/mixins";
+
+.modal {
+  $self: &;
+  z-index: 6;
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: $black, $alpha: 0.8);
+    @include display-flex($width: 100vw, $height: 100vh);
+  }
+  &--success {
+    width: 50%;
+    height: 40%;
+    box-shadow: 2px 2px 10px black;
+    .modal__content{
+        @include display-flex($height:100%);
+        background-color: $white;
+        border-radius: 10px;
+        &__title{
+            @include font($family:"poppins",$color: $black);
+        }
+        .modal__img-box{
+            width: 100px;
+            height: 100px;
+            img{
+                width: 100px;
+                height: 100px;    
+                object-fit: contain;
+                object-position: center center;
+            }
+        }
+        .button-box{
+            @include display-flex;
+            // .button{
+            //     @include font($transform: capitalize, $weight: 400, $family: "poppins")
+            // }
+        }
+    }
+  }
+}

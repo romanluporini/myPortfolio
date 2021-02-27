@@ -8,11 +8,7 @@
   font-size: 1.1em;
   text-decoration: none;
   filter: drop-shadow(1px 1px 1px #000);
-  display: none;
   &:hover{
     color: $nav-links-active;
   }  
-  @include netbook {
-    display: block;
-  }
 }

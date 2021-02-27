@@ -5,7 +5,7 @@
 @import "../1-components/textArea";
 
 .contact {
-  color: $c-background;
+  background-color: $c-background;
   $self: &;
   .title {
     h1 {

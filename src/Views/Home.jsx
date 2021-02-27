@@ -1,25 +1,29 @@
 import React from "react";
 import Nav from "../components/Nav";
 import ArrowButton from '../components/ArrowButton'
-import TypeWriter from '../Helpers/TypeWriter'
-import { Button } from '@material-ui/core';
-import Scroll from "../components/Scroll";
 import FloatingButtonAdd from "../components/FloatingButtonAdd";
+import Scroll from "../components/Scroll";
+import TypeWriter from '../Helpers/TypeWriter'
+import useWindowDimensions from '../Hooks/useWindowDimensions'
+import { Button } from '@material-ui/core';
 import '../Styles/3-layout/_home.scss'
 import '../Styles/2-base/_typography.scss'
 import '../Styles/1-components/_button.scss'
 import '../Styles/1-components/_scroll.scss'
 
 function Home() {
+
+  const { width } = useWindowDimensions()
+
   return (
     <div className="home" id="home">
       <div className="home__Bg">
         <div className="stars1"></div>
         <div className="stars2"></div>
         <div className="stars3"></div>
-      <div className="home__Bg--filtered-layer"></div>
+        <div className="home__Bg--filtered-layer"></div>
       </div>
-      <Nav queryFlag={false} />
+      <Nav queryFlag={width}/>
       <div className="header-content">
         <TypeWriter />
         <h4 className="header-content__subtitle">
@@ -39,9 +43,7 @@ function Home() {
           </Button>
         </div>
       </div>
-      <div className="scroll__box">
-        <Scroll />
-      </div>
+        <Scroll queryFlag={width} />
       <div className="fab-box">
         <FloatingButtonAdd />
       </div>
