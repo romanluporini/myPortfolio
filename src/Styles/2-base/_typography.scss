@@ -22,7 +22,9 @@ h4{
   @include font-size($h4-font-sizes, $fs-breakpoints: $breakpoints);
 }
 
-.header-content__subtitle{
+.header-content__subtitle,
+.modal__content__title
+{
   @include font-size($h4-header-subtitle, $fs-breakpoints: $breakpoints);
 }
 

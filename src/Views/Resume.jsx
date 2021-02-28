@@ -1,21 +1,68 @@
-import React from 'react'
-// import Button from './components/Button'
+import React, { useState } from 'react'
 import Grid from '@material-ui/core/Grid';
 import Title from '../components/Title'
-import { Button, Paper } from '@material-ui/core'
+import { Button } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import '../Styles/3-layout/_resume.scss'
 import '../Styles/1-components/_button.scss'
+import Modal from '../components/Modal'
+import { downloadPDF } from '../Helpers/DownloadFiles'
 
 function Resume() {
+
+    const [showModal, setShowModal] = useState(false)
+
+    // function handleDownload() {
+    //     try {
+    //         fetch('https://github.com/romanluporini/portfolio/files/5989207/CV.Luporini.-.Full.Stack.Web.developer.pdf', {mode: "cors"})
+    //             .then(
+    //                 data => {
+    //                     const response = data
+    //                     return response
+    //                 }
+    //             )
+    //             .then(response => {
+    //                 downloadPDF(response, "CV Luporini - Full Stack Web Developer")
+    //             }
+    //             )
+    //     } catch (error) {
+    //         console.log(error)
+    //         return error
+    //     }
+    // }
+
+    function closeModal() {
+        setShowModal(prevState => !prevState)
+    }
+
+    function openModal() {
+        setShowModal(prevState => !prevState)
+        // handleDownload()
+        setTimeout(() => {
+            closeModal()
+        }, 2000)
+    }
+
     return (
         <div className="resume" id="resume">
-            <Grid container className="resume__grid-container">
-                <Grid item xs={12}>
+            {showModal &&
+                <Modal showModal={showModal} from="resume" />
+            }
+            <Grid
+                container
+                className="resume__grid-container"
+            >
+                <Grid
+                    item
+                    xs={12}>
                     <Title section="resume" />
                 </Grid>
-                <Grid item xs={12} sm={6} className="resume__grid-item">
+                <Grid
+                    item
+                    xs={12} sm={6}
+                    className="resume__grid-item"
+                >
                     <div className="resume__profile resume__section">
                         <h3 className="resume__section-title">profile</h3>
                         <div className="text">
@@ -40,7 +87,10 @@ function Resume() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={12} sm={6} className="resume__grid-item">
+                <Grid
+                    item xs={12} sm={6}
+                    className="resume__grid-item"
+                >
                     <div className="resume__work-experience resume__section">
                         <h3 className="resume__section-title">work-experience</h3>
                         <div className="text">
@@ -59,7 +109,11 @@ function Resume() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={12} sm={6} className="resume__grid-item">
+                <Grid
+                    item
+                    xs={12} sm={6}
+                    className="resume__grid-item"
+                >
                     <div className="resume__education resume__section">
                         <h3 className="resume__section-title">education</h3>
                         <div className="text">
@@ -84,7 +138,11 @@ function Resume() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={12} sm={6} className="resume__grid-item">
+                <Grid
+                    item
+                    xs={12} sm={6}
+                    className="resume__grid-item"
+                >
                     <div className="resume__projects resume__section">
                         <h3 className="resume__section-title">links to projects</h3>
                         <div className="text">
@@ -100,11 +158,24 @@ function Resume() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid
+                    item
+                    xs={12}
+                >
                     <div className="resume__button-box">
-                        <Button variant="contained" color="secondary" className="button">
+                        <Button
+                            variant="contained"
+                            color="secondary"
+                            className="button"
+                        >
                             <FontAwesomeIcon icon={faDownload} />
-                            <a href="https://github.com/romanluporini/portfolio/files/5989207/CV.Luporini.-.Full.Stack.Web.developer.pdf" download="CV Luporini - Full Stack Web Developer">
+                            <a
+                                href="https://github.com/romanluporini/portfolio/files/5989207/CV.Luporini.-.Full.Stack.Web.developer.pdf"
+                                download="CV Luporini - Full Stack Web Developer"
+                                onClick={() => {
+                                    openModal()
+                                }}
+                            >
                                 resume
                             </a>
                         </Button>

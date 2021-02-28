@@ -3,6 +3,9 @@ import Title from '../components/Title'
 import profilePhoto from '../Assets/Images/profile-photo.png'
 
 function AboutMe() {
+
+    
+
     return (
         <div className="about-me" id="about">
             <div className="about-me__header">

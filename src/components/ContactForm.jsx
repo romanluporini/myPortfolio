@@ -11,12 +11,10 @@ function ContactForm() {
     const [showModal, setShowModal] = useState(false)
 
     function openModal() {
-        setShowModal(prev => !prev)
+        setShowModal(prevState => !prevState)
     }
 
-    function handleClick(){
-        openModal()
-    }
+    // tengo que incorporar redux para poder cerrar y abrir el modal
 
     return (
         <form
@@ -26,7 +24,7 @@ function ContactForm() {
             onSubmit={SendEmail}
         >
             {showModal&&
-            <Modal showModal={showModal}/>
+            <Modal showModal={showModal} from="contact"/>
             }
             <Grid container spacing={0, 2}>
                 <Grid item xs={12} sm={6}>
@@ -50,7 +48,7 @@ function ContactForm() {
                         color="secondary"
                         className="button"
                         type="submit"
-                    onClick={() => { handleClick() }}
+                    onClick={() => { openModal() }}
                     >
                         <FontAwesomeIcon icon={faEnvelope} />
                         <a>

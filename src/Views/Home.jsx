@@ -4,7 +4,7 @@ import ArrowButton from '../components/ArrowButton'
 import FloatingButtonAdd from "../components/FloatingButtonAdd";
 import Scroll from "../components/Scroll";
 import TypeWriter from '../Helpers/TypeWriter'
-import useWindowDimensions from '../Hooks/useWindowDimensions'
+import useWindowDimensions from '../Hooks/UseWindowDimensions'
 import { Button } from '@material-ui/core';
 import '../Styles/3-layout/_home.scss'
 import '../Styles/2-base/_typography.scss'

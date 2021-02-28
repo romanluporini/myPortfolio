@@ -1,14 +1,27 @@
 import React, { useState } from 'react'
 import { Fragment } from 'react'
+import { Button } from '@material-ui/core'
+import loadingSpinner from '../Assets/Animations/Eclipse-1s-200px.gif'
 import emailSent from '../Assets/Animations/image_processing20200523-13638-7f3ztd.gif'
-import {Button} from '@material-ui/core'
 
 function Modal(props) {
 
     const [modal, setModal] = useState(props.showModal)
 
-    function handleClose() {
+    function handleClose(e) {
+        e.preventDefault()
         setModal(prev => !prev)
+    }
+
+    const content = callFrom => {
+        switch (callFrom) {
+            case "contact":
+                return { title: "Email enviado correctamente", anim: emailSent, showButton: true }
+            case "resume":
+                return { title: "Downloading resume, please wait...", anim: loadingSpinner, showButton: false }
+            default:
+                break;
+        }
     }
 
     return (
@@ -19,24 +32,28 @@ function Modal(props) {
                         <div className="modal--success">
                             <div className="modal__content">
                                 <h4 className="modal__content__title">
-                                    E-mail enviado correctamente
+                                    {content(props.from).title}
                                 </h4>
                                 <div className="modal__img-box">
-                                    <img 
-                                    src={emailSent}
-                                    alt="email-sent"
-
+                                    <img
+                                        src={content(props.from).anim}
+                                        alt="email-sent"
                                     />
                                 </div>
                                 <div className="button-box">
-                                    <Button
-                                        variant="contained"
-                                        color="secondary"
-                                        className="button"
-                                        onClick={() => { handleClose() }}
-                                    >
-                                        aceptar
-                                    </Button>
+                                    {content(props.from).showButton &&
+                                        <Button
+                                            variant="contained"
+                                            color="secondary"
+                                            className="button"
+                                            onClick={(e) => {
+                                                handleClose(e)
+                                            }}
+                                        >
+                                            <a>
+                                                aceptar
+                                        </a>
+                                        </Button>}
                                 </div>
                             </div>
                         </div>

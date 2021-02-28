@@ -21,19 +21,15 @@ function App() {
     setInterval(() => {
       if (counter === 0) {
         counter++
-        console.log(counter)
         setLoading('loading')
       } else if (counter === 1) {
         counter++
-        console.log(counter)
         setLoading('loading.')
       } else if (counter === 2) {
         counter++
-        console.log(counter)
         setLoading('loading..')
       } else {
         counter = 0
-        console.log(counter)
         setLoading('loading...')
       }
     }, 500)

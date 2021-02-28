@@ -8,10 +8,6 @@ import Gallery from '../components/Gallery'
 import '../Styles/1-components/_card.scss'
 import '../Styles/1-components/_button.scss'
 import { Fragment } from 'react';
-import { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faTimes, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
-import { TvRounded } from '@material-ui/icons';
 
 class Card extends React.Component {
     constructor(props) {

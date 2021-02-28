@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Fragment } from 'react'
-import useWindowDimensions from '../Hooks/useWindowDimensions'
 import '../Styles/1-components/_scroll.scss'
 
 
