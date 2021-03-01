@@ -6,7 +6,7 @@ import Freelance from './Views/Freelance'
 import Resume from './Views/Resume'
 import Contact from './Views/Contact'
 import Footer from './Views/Footer'
-import loadingSpinner from './Assets/Animations/Eclipse-1s-200px.gif'
+import loadingSpinner from './Assets/Animations/loadingSpinner.gif'
 import './Styles/1-components/_loadingSpinner.scss'
 import './Styles/main.scss'
 
@@ -39,7 +39,7 @@ function App() {
     handleInterval()
     setTimeout(() => {
       setSpinner(false)
-    }, 3000)
+    }, 2500)
   }, [])
 
 

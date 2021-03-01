@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Fragment } from 'react'
 import { Button } from '@material-ui/core'
-import loadingSpinner from '../Assets/Animations/Eclipse-1s-200px.gif'
-import emailSent from '../Assets/Animations/image_processing20200523-13638-7f3ztd.gif'
+import loadingSpinner from '../Assets/Animations/loadingSpinner.gif'
+import emailSent from '../Assets/Animations/successAction.gif'
 
 function Modal(props) {
 

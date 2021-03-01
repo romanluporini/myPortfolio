@@ -6,11 +6,6 @@
 
 .home {
   @include display-flex($width: 100%, $height: 100vh);
-  // background-image: url("../../Assets/Images/header-bg.jpg");
-  // background: $h-background;
-  // background: rgb(2,0,36);
-  // background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%);  // background: linear-gradient(90deg, $h-background, rgb(144,8,201));
-  // background-position: center 30%;
   &__Bg {
     height: 100%;
     width: 100%;
@@ -19,7 +14,7 @@
     left: 0;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     overflow: hidden;
-    &__img{
+    &__img {
       object-fit: cover;
       object-position: center center;
       width: 100%;
@@ -27,7 +22,6 @@
       animation: opacityImg 1.5s ease 1 forwards;
     }
     &--filtered-layer {
-      // background-color: rgba($color: $h-background, $alpha: 0.5);
       background-color: rgba(0, 106, 255, 0.1);
       position: absolute;
       top: 0;
@@ -52,10 +46,13 @@
     position: relative;
     bottom: 20px;
     &__title {
+      @include font(
+        $color: $h-title,
+        $weight: 700,
+        $family: "poppins",
+        $transform: none
+      );
       margin: 8px 0px;
-      font-family: "poppins", sans-serif;
-      font-weight: bold;
-      color: $h-title;
       filter: drop-shadow(1px 1px 1px #000);
       display: inline-block;
       text-align: center;
@@ -64,11 +61,14 @@
       }
     }
     &__subtitle {
+      @include font(
+        $color: $h-subtitle,
+        $weight: 400,
+        $family: "roboto",
+        $transform: none
+      );
       margin: 8px 0px 32px;
-      font-family: "Roboto", sans-serif;
-      font-weight: normal;
-      filter: drop-shadow(1px 1px 1px #000);
-      color: $h-subtitle;
+      filter: drop-shadow(3px 3px 1px #000);
       text-align: center;
     }
     .buttons {
@@ -92,12 +92,11 @@
   }
 }
 
-
-@keyframes opacityImg{
-  0%{
+@keyframes opacityImg {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
