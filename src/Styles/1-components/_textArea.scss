@@ -14,6 +14,9 @@
   border: 2px solid rgba($color: #000000, $alpha: 0.2);
   border-radius: 4px;
   font-size: 1em;
+  transition: transform;
+  transform: translate(0,100%);    
+  opacity: 0;
   &::placeholder{
       color: gray;
   }

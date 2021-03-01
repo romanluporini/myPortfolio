@@ -22,7 +22,7 @@ function Title(props) {
     }
 
     return (
-        <div className="title">
+        <div className={props.inView ? "title contact__title--visible" : "title"}>
             <h1>{section(props.section).titleText}</h1>
             <h6>{section(props.section).subtitleText}</h6>
             <hr></hr>

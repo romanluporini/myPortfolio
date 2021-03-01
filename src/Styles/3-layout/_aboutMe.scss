@@ -8,6 +8,8 @@
   $self: &;
   &__header {
     @include display-flex($direction: row, $justify: flex-start);
+    opacity: 0;
+    transform: translate(-100%,0);
     .title {
       h1 {
         color: $a-title;
@@ -41,6 +43,8 @@
   }
   &__text {
     @include display-flex;
+    opacity: 0;
+    transform: translate(100%,0);
     p {
       @include font($color: $a-text, $weight: 400, $transform: none);
       text-align: center;
@@ -76,4 +80,11 @@
       }
     }
   }
+}
+
+
+.visible{
+  transform: translate(0,0);
+  transition: transform 0.6s ease-in;
+  opacity: 1;
 }

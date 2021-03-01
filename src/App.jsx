@@ -14,7 +14,7 @@ function App() {
 
   const [spinner, setSpinner] = useState(true)
   const [loading, setLoading] = useState('loading')
-  
+
   var counter = 0
 
   function handleInterval() {
@@ -45,7 +45,8 @@ function App() {
 
   return (
     <div className="App">
-      {spinner ?
+      {spinner
+        ?
         <Fragment>
           <div className="loading-spinner">
             <div className="loading-spinner__box">

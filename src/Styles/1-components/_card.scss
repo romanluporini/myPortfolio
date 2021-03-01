@@ -131,42 +131,42 @@
 .visited {
   &:nth-child(1) .card {
     transform: translateX(0%);
-    transition-delay: 1s;
+    transition-delay: 0.3s;
     .card__content h3,
     .card__content p {
       transform: rotateX(0deg);
-      transition: 1s;
-      transition-delay: 2.2s;
+      transition: transform 1s;
+      transition-delay: 1.2s;
     }
   }
   &:nth-child(2) .card {
     transform: translateX(0%);
-    transition-delay: 1.2s;
+    transition-delay: 0.5s;
     .card__content h3,
     .card__content p {
       transform: rotateX(0deg);
-      transition: 1s;
-      transition-delay: 2.4s;
+      transition: transform 1s;
+      transition-delay: 1.4s;
     }
   }
   &:nth-child(3) .card {
     transform: translateX(0%);
-    transition-delay: 1.4s;
+    transition-delay: 0.7s;
     .card__content h3,
     .card__content p {
       transform: rotateX(0deg);
-      transition: 1s;
-      transition-delay: 2.6s;
+      transition: transform 1s;
+      transition-delay: 1.6s;
     }
   }
   &:nth-child(4) .card {
     transform: translateX(0%);
-    transition-delay: 1.6s;
+    transition-delay: 0.9s;
     .card__content h3,
     .card__content p {
       transform: rotateX(0deg);
-      transition: 1s;
-      transition-delay: 2.8s;
+      transition: transform 1s;
+      transition-delay: 1.8s;
     }
   }
 }
