@@ -19,8 +19,16 @@
     left: 0;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     overflow: hidden;
+    &__img{
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+      height: 100%;
+      animation: opacityImg 1.5s ease 1 forwards;
+    }
     &--filtered-layer {
-      background-color: rgba($color: $h-background, $alpha: 0.5);
+      // background-color: rgba($color: $h-background, $alpha: 0.5);
+      background-color: rgba(0, 106, 255, 0.1);
       position: absolute;
       top: 0;
       left: 0;
@@ -31,7 +39,7 @@
   nav {
     @include display-flex($width: 60%, $direction: row, $justify: space-around);
     position: absolute;
-    top: 30px;
+    top: 20px;
     .menu-icon {
       color: $white;
     }
@@ -82,20 +90,14 @@
     left: 50%;
     transform: translateX(-50%);
   }
-  .fab-box {
-    z-index: 2;
-    position: fixed;
-    top: 85vh;
-    right: 5vw;
+}
+
+
+@keyframes opacityImg{
+  0%{
+    opacity: 0;
   }
-  .arrow-button-box {
-    display: none;
-    z-index: 2;
-    position: absolute;
-    top: 85vh;
-    @include netbook {
-      display: block;
-      @include display-flex($justify: flex-end);
-    }
+  100%{
+    opacity: 1;
   }
 }

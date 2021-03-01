@@ -9,7 +9,7 @@ import { useInView } from 'react-intersection-observer';
 
 function Portfolio() {
 
-    const [ref, inView] = useInView({ threshold: 0.3, triggerOnce:true })
+    const [ref, inView] = useInView({ threshold: 0.2, triggerOnce:true })
 
     //for queryFlag
     const { width } = useWindowDimensions()

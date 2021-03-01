@@ -27,13 +27,16 @@
     z-index: inherit;
     animation: popUp 0.4s ease-in-out 1 backwards;
     @include tablet {
-      width: 50%;
+      width: 60%;
       height: 40%;
-      max-width: 400px;
+      max-width: 500px;
       padding: 32px;
     }
     @include netbook {
       max-width: 500px;
+    }
+    @include notebook{
+      max-width: 550px;
     }
     .modal__content {
       @include display-flex($height: 100%);

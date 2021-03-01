@@ -8,6 +8,8 @@ import Gallery from '../components/Gallery'
 import '../Styles/1-components/_card.scss'
 import '../Styles/1-components/_button.scss'
 import { Fragment } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 class Card extends React.Component {
     constructor(props) {
@@ -85,7 +87,7 @@ class Card extends React.Component {
                 }
                 <Fragment>
                     <div className="card">
-                        <div className="card__img--wrapper">
+                        <div className="card__img-wrapper">
                             <img src={this.cardType(this.state.title).img} alt={this.cardType(this.state.title).title} className="card__img" />
                             <div className="card__button-box">
                                 <Button variant="contained" color="secondary" className="button card__button">
@@ -93,13 +95,11 @@ class Card extends React.Component {
                                         target={this.state.openBlank}
                                         href={this.state.externalOpen}
                                         onClick={(e) => {
-                                            if (this.state.openBlank === "") {
-                                                e.preventDefault()
-                                            }
+                                            if (this.state.openBlank === "") { e.preventDefault() }
                                             this.handleOpen(this.cardType(this.state.title).href)
                                         }}
                                     >
-                                        open
+                                        {this.state.queryFlag ? "open" : <FontAwesomeIcon icon={faExternalLinkAlt}/>}
                                     </a>
                                 </Button>
                             </div>
