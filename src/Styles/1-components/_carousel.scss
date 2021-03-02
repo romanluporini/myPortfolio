@@ -13,8 +13,8 @@
   .Carousel-indicator-3 circle {
     fill: rgba($color: $f-bullets, $alpha: 0.8);
   }
-  .Carousel-active-4 circle {
-    fill: $f-bullets-active;
+  .Carousel-active-4 circle{
+    fill: $f-bullets-active !important;
   }
   .Carousel-buttonWrapper-5 {
     display: none;

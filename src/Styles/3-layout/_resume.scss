@@ -40,7 +40,7 @@
     }
   }
   &__section {
-    #{$self}__section-title {
+    &-title {
       @include font(
         $color: $r-title,
         $weight: 400,
@@ -48,12 +48,13 @@
         $transform: capitalize
       );
       margin-bottom: 8px;
+      text-decoration: underline;
     }
     .text {
       @include tablet {
         padding-left: 8px;
       }
-      p {
+      p,a {
         @include font(
           $color: $r-section-title,
           $weight: 300,
@@ -61,6 +62,11 @@
           $family: "roboto"
         );
         line-height: 1.5em;
+      }
+      a{
+        text-decoration: underline;
+        color: $r-subtitle;
+        display: block;
       }
       span {
         @include font(
