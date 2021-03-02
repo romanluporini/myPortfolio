@@ -149,11 +149,11 @@ function Resume() {
                             <span>
                                 freelance
                     </span>
-                        <a href="https://egeriaonlinetesting.netlify.app">
+                        <a href="https://egeriaonlinetesting.netlify.app" target="blank">
                             https://egeriaonlinetesting.netlify.app
                         </a>
                         <p>Ref: Rotondaro, Agustín +598 95 606 245</p>
-                        <a href="https://central-reservas-rev01.netlify.app/index.html">
+                        <a href="https://central-reservas-rev01.netlify.app/index.html"  target="blank">
                             https://central-reservas-rev01.netlify.app/index.html 
                             log-in: opción 1 DNI: 123  Pass: 123
                         </a>
