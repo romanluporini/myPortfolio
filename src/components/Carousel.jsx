@@ -41,12 +41,9 @@ export default function freelanceCarousel(props) {
         )
     }
 
-
     return (
         <Carousel className="carousel">
-            {
-                items.map((item, i) => <Item key={i} item={item} />)
-            }
+            { items.map((item, i) => <Item key={i} item={item} />) }
         </Carousel>
     )
 }

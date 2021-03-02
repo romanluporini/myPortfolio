@@ -3,7 +3,6 @@
 
 .loading-spinner {
   @include display-flex($width: 100vw, $height: 100vh);
-  // animation: opacity 1s ease-out 2s 1 backwards;
   &__box {
     width: 70px;
     height: 70px;
@@ -18,13 +17,3 @@
     }
   }
 }
-
-
-// @keyframes opacity{
-//   0%{
-//     opacity: 1;
-//   }
-//   100%{
-//     opacity: 0;
-//   }
-// }
