@@ -2,33 +2,32 @@
 $white: #fff;
 $black: #000;
 $button: #F50057;
-$arrow-button: #1F89FC;
-$linked-in: #0E76A8;
+$blue: #006aff; 
+$green: #01ECD5;
 
 /*Home*/
-$h-background: #006aff;
 $nav-links: $white;
-$nav-links-active: #01ECD5;
-$h-title: #01ECD5;
+$nav-links-active: $green;
+$h-title: $green;
 $h-subtitle: $white;
 
 /*About*/
 $a-background: $white;
 $a-title: $black;
-$a-subtitle: $h-background;
+$a-subtitle: $blue;
 $a-text: $a-title;
 
 /*Freelancer*/
 $f-background: rgb(243, 245, 249);
-$f-title: $h-background;
+$f-title: $blue;
 $f-subtitle: #32424A;
 $f-slide-title: $f-subtitle;
 $f-text: $f-subtitle;
 $f-bullets: $f-subtitle;
-$f-bullets-active: #01ECD5;
+$f-bullets-active: $green;
 
 /*Portfolio*/
-$p-background: #01ECD5;
+$p-background: $green;
 $p-title: $white;
 $p-subtitle: $p-background;
 $p-card-title: $white;
@@ -44,7 +43,7 @@ $r-text:$r-title;
 /*Contact*/
 $c-background: $white;
 $c-title: $black;
-$c-subtitle: $h-background;
+$c-subtitle: $blue;
 $c-border: #32424A;
 $c-input: $black;
 $c-required: $button;

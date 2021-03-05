@@ -6,7 +6,7 @@ import Freelance from './Views/Freelance'
 import Resume from './Views/Resume'
 import Contact from './Views/Contact'
 import Footer from './Views/Footer'
-import loadingSpinner from './Assets/Animations/loadingSpinner.gif'
+import loadingSpinner from './Assets/Animations/loadingSpinner.svg'
 import './Styles/1-components/_loadingSpinner.scss'
 import './Styles/main.scss'
 
@@ -21,7 +21,6 @@ function App() {
     setInterval(() => {
       if (counter === 0) {
         counter++
-        // setLoading('loading')
       } else if (counter === 1) {
         counter++
         setLoading('loading.')

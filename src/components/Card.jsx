@@ -3,6 +3,7 @@ import projectImg1 from '../Assets/Images/bluedot.png';
 import projectImg2 from '../Assets/Images/gifos.png';
 import projectImg3 from '../Assets/Images/delilah.png';
 import projectImg4 from '../Assets/Images/egeria.jpg';
+import projectImg5 from '../Assets/Images/sentate.png';
 import { Button } from '@material-ui/core';
 import Gallery from '../components/Gallery'
 import '../Styles/1-components/_card.scss'
@@ -64,6 +65,8 @@ class Card extends React.Component {
                 return { title: 'Delilah Resto', shortText: 'Restaurant order management', text: 'Objectives: API programming, SQL database creation and querying, user authentication with JWT, folder structure for project scaling.', note: '*Note: this is a non-commercial project', img: projectImg3, href: "https://github.com/romanluporini/DelilahResto---TPn3-Acamica" }
             case 'egeria':
                 return { title: 'Egeria', shortText: 'International E-commerce', text: 'UX/UI design of international e-commerce', img: projectImg4, href: "https://egeriaonlinetesting.netlify.app" }
+            case 'sentate':
+                return { title: 'Sentate', shortText: 'travel booking platform', text: 'front-end development of a travel booking platform', img: projectImg5, href: "https://sentate.com.ar/" }
             default:
                 break;
         }

@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from 'react'
-import Gallery from '../components/Gallery'
 import Title from '../components/Title'
 import Card from '../components/Card'
 import Grid from '@material-ui/core/Grid';
@@ -9,7 +8,7 @@ import { useInView } from 'react-intersection-observer';
 
 function Portfolio() {
 
-    const [ref, inView] = useInView({ threshold: 0.2, triggerOnce:true })
+    const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true })
 
     //for queryFlag
     const { width } = useWindowDimensions()
@@ -24,7 +23,12 @@ function Portfolio() {
             <div className="portfolio__Bg--filtered-layer"></div>
             <Title section="portfolio" />
             < div className="portfolio__cards" ref={ref}>
-                <Grid container spacing={6} direction="column" justify="center" >
+                <Grid
+                    container
+                    spacing={6}
+                    direction="column"
+                    justify="center"
+                >
                     <Grid
                         item xs={12}
                         className={
@@ -74,6 +78,19 @@ function Portfolio() {
                     >
                         <Card
                             title="egeria"
+                            queryFlag={width}
+                        />
+                    </Grid>
+                    <Grid
+                        item xs={12}
+                        className={
+                            inView
+                                ? "portfolio__cards-item visited"
+                                : "portfolio__cards-item"
+                        }
+                    >
+                        <Card
+                            title="sentate"
                             queryFlag={width}
                         />
                     </Grid>

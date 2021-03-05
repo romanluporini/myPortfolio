@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "../components/Nav";
 import Scroll from "../components/Scroll";
-import TypeWriter from '../Helpers/TypeWriter'
+import TypeWriter from '../components/TypeWriter'
 import { Button } from '@material-ui/core';
 import homeBg from '../Assets/Images/home-bg.jpg'
 import useWindowDimensions from '../Hooks/UseWindowDimensions'

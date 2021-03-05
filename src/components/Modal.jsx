@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Fragment } from 'react'
 import { Button } from '@material-ui/core'
-import loadingSpinner from '../Assets/Animations/loadingSpinner.gif'
-import emailSent from '../Assets/Animations/successAction.gif'
+import loadingSpinner from '../Assets/Animations/loadingSpinner.svg'
+import success from '../Assets/Images/success.svg'
+import error from '../Assets/Images/error.svg'
 
 function Modal(props) {
 
@@ -16,9 +17,12 @@ function Modal(props) {
     const content = callFrom => {
         switch (callFrom) {
             case "contact":
-                return { title: "Email enviado correctamente", anim: emailSent, showButton: true }
+                return { title: "Email sent correctly", anim: success, showButton: true }
             case "resume":
-                return { title: "Downloading resume, please wait...", anim: loadingSpinner, showButton: false }
+                if(props.error){
+                   return  { title: "Something went wrong, please try again.", anim: error, showButton: true }
+                }
+                return { title: "downloading resume, please wait...", anim: loadingSpinner, showButton: false }
             default:
                 break;
         }
@@ -34,10 +38,10 @@ function Modal(props) {
                                 <h4 className="modal__content__title">
                                     {content(props.from).title}
                                 </h4>
-                                <div className="modal__img-box">
+                                <div className={props.from === "resume" ? props.error ? "modal__img-box" : "modal__anim-box" : "modal__img-box"}>
                                     <img
                                         src={content(props.from).anim}
-                                        alt="email-sent"
+                                        alt="error-success"
                                     />
                                 </div>
                                 <div className="button-box">
@@ -50,8 +54,8 @@ function Modal(props) {
                                                 handleClose(e)
                                             }}
                                         >
-                                            <a>
-                                                aceptar
+                                        <a>
+                                            {props.from === "resume" ? "retry" : "ok"}
                                         </a>
                                         </Button>}
                                 </div>

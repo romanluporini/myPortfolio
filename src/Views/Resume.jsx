@@ -13,33 +13,37 @@ import FileToDownload from '../Assets/Resume/CV.pdf'
 function Resume() {
 
     const [showModal, setShowModal] = useState(false)
+    const [error, setError] = useState()
 
     function handleDownload() {
         try {
             downloadPDF(FileToDownload, "CV Luporini - Full Stack Web developer.pdf")
-            closeModal()
-        } catch (error) {
-            console.log(error)
-            return error
+            setTimeout(() => {
+                closeModal()
+            }, 2000)
+        } catch (err) {
+            console.log(err)
+            modalOnError()
         }
     }
 
+    function modalOnError() {
+        setError(true)
+    }
+
     function closeModal() {
-        setShowModal(prevState => !prevState)
+        setShowModal(false)
     }
 
     function openModal() {
-        setShowModal(prevState => !prevState)
+        setShowModal(true)
         handleDownload()
-        // setTimeout(() => {
-        //     closeModal()
-        // }, 2000)
     }
 
     return (
         <div className="resume" id="resume">
             {showModal &&
-                <Modal showModal={showModal} from="resume" />
+                <Modal showModal={showModal} error={error} from="resume" />
             }
             <Grid
                 container
@@ -65,10 +69,10 @@ function Resume() {
                                 HTML, CSS/Sass-Sasscript, Javascript, nodeJS, SQL, visual basic(MS Excel macros).
                             </p>
                             <span>
-                                Frameworks/Libraries/Systems
+                                Frameworks/Libraries/Databases/Systems
                             </span>
                             <p>
-                                Express.js, Sequelize, bcrypt, JSON Web Token, MongoDB, MySql, phpMyAdmin, VS code, Postman, Adobe XD.
+                            React, Redux, Express.js, Sequelize, bcrypt, JSON Web Token, MongoDB, MySql, phpMyAdmin, VS code, Postman, Adobe XD.
                             </p>
                             <span>
                                 English
@@ -90,13 +94,13 @@ function Resume() {
                                 Freelance Front-End Web Developer
                     </span>
                             <p>
-                                Diseño y desarrollo de interfaz de usuario en sitio web para reservas de transporte de pasajeros.
+                                UX/ UI desing and development of a travel booking platform.
                     </p>
                             <span>
                                 Heliconia Software | agosto/sept. 2020
                     </span>
                             <p>
-                                Diseño y desarrollo de interfaz de usuario en sitio web para comercio internacional.
+                                UX/ UI desing and development of an international e-commerce.
                     </p>
                         </div>
                     </div>
@@ -125,7 +129,7 @@ function Resume() {
                                 E.E.T. N°6
                     </span>
                             <p>
-                                Estudios secundarios | Técnico electromecánico
+                                Secondary School | Electro-Mechanic technician
                     </p>
                         </div>
                     </div>
@@ -141,11 +145,11 @@ function Resume() {
                             <span>
                                 freelance
                     </span>
-                            <a href="https://egeriaonlinetesting.netlify.app" target="blank">
+                            <a href="https://egeriaonlinetesting.netlify.app" target="_blank">
                                 https://egeriaonlinetesting.netlify.app
                         </a>
                             <p>Ref: Rotondaro, Agustín +598 95 606 245</p>
-                            <a href="https://www.sentate.com.ar" target="blank">
+                            <a href="https://www.sentate.com.ar" target="_blank">
                                 https://www.sentate.com.ar
                         </a>
                             <p>Ref: Iglesias, Marcos +54 9 3364 31-2887</p>
@@ -164,8 +168,6 @@ function Resume() {
                         >
                             <FontAwesomeIcon icon={faDownload} />
                             <a
-                                // href="https://github.com/romanluporini/portfolio/files/5989207/CV.Luporini.-.Full.Stack.Web.developer.pdf"
-                                // download="CV Luporini - Full Stack Web Developer"
                                 onClick={() => {
                                     openModal()
                                 }}

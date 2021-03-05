@@ -1,12 +1,18 @@
 @import '../Styles/0-abstracts/vars';
+@import "./3-layout/layoutGlobal";
 
 * {
   margin: unset;
   padding: unset;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
+  #root {
+    overflow-x: hidden;
+    min-width: 320px;
+  }
   ::-webkit-scrollbar {
     width: 12px;
   }
@@ -23,10 +29,4 @@ html {
   ::-webkit-scrollbar-thumb:hover {
     background: adjust-hue($color: lightgrey, $degrees: 10);
   }
-  #root {
-    overflow-x: hidden;
-    min-width: 320px;
-  }
 }
-
-@import "./3-layout/layoutGlobal";
