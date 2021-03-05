@@ -8,29 +8,21 @@ import '../Styles/3-layout/_resume.scss'
 import '../Styles/1-components/_button.scss'
 import Modal from '../components/Modal'
 import { downloadPDF } from '../Helpers/DownloadFiles'
+import FileToDownload from '../Assets/Resume/CV.pdf'
 
 function Resume() {
 
     const [showModal, setShowModal] = useState(false)
 
-    // function handleDownload() {
-    //     try {
-    //         fetch('https://github.com/romanluporini/portfolio/files/5989207/CV.Luporini.-.Full.Stack.Web.developer.pdf', {mode: "cors"})
-    //             .then(
-    //                 data => {
-    //                     const response = data
-    //                     return response
-    //                 }
-    //             )
-    //             .then(response => {
-    //                 downloadPDF(response, "CV Luporini - Full Stack Web Developer")
-    //             }
-    //             )
-    //     } catch (error) {
-    //         console.log(error)
-    //         return error
-    //     }
-    // }
+    function handleDownload() {
+        try {
+            downloadPDF(FileToDownload, "CV Luporini - Full Stack Web developer.pdf")
+            closeModal()
+        } catch (error) {
+            console.log(error)
+            return error
+        }
+    }
 
     function closeModal() {
         setShowModal(prevState => !prevState)
@@ -38,10 +30,10 @@ function Resume() {
 
     function openModal() {
         setShowModal(prevState => !prevState)
-        // handleDownload()
-        setTimeout(() => {
-            closeModal()
-        }, 2000)
+        handleDownload()
+        // setTimeout(() => {
+        //     closeModal()
+        // }, 2000)
     }
 
     return (
@@ -149,15 +141,14 @@ function Resume() {
                             <span>
                                 freelance
                     </span>
-                        <a href="https://egeriaonlinetesting.netlify.app" target="blank">
-                            https://egeriaonlinetesting.netlify.app
+                            <a href="https://egeriaonlinetesting.netlify.app" target="blank">
+                                https://egeriaonlinetesting.netlify.app
                         </a>
-                        <p>Ref: Rotondaro, Agustín +598 95 606 245</p>
-                        <a href="https://central-reservas-rev01.netlify.app/index.html"  target="blank">
-                            https://central-reservas-rev01.netlify.app/index.html 
-                            log-in: opción 1 DNI: 123  Pass: 123
+                            <p>Ref: Rotondaro, Agustín +598 95 606 245</p>
+                            <a href="https://www.sentate.com.ar" target="blank">
+                                https://www.sentate.com.ar
                         </a>
-                        <p>Ref: Iglesias, Marcos +54 9 3364 31-2887</p>
+                            <p>Ref: Iglesias, Marcos +54 9 3364 31-2887</p>
                         </div>
                     </div>
                 </Grid>
@@ -173,8 +164,8 @@ function Resume() {
                         >
                             <FontAwesomeIcon icon={faDownload} />
                             <a
-                                href="https://github.com/romanluporini/portfolio/files/5989207/CV.Luporini.-.Full.Stack.Web.developer.pdf"
-                                download="CV Luporini - Full Stack Web Developer"
+                                // href="https://github.com/romanluporini/portfolio/files/5989207/CV.Luporini.-.Full.Stack.Web.developer.pdf"
+                                // download="CV Luporini - Full Stack Web Developer"
                                 onClick={() => {
                                     openModal()
                                 }}

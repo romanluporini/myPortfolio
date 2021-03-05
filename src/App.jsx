@@ -21,7 +21,7 @@ function App() {
     setInterval(() => {
       if (counter === 0) {
         counter++
-        setLoading('loading')
+        // setLoading('loading')
       } else if (counter === 1) {
         counter++
         setLoading('loading.')
