@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.12d9929b.chunk.css",
-    "main.js": "/static/js/main.1c29d542.chunk.js",
-    "main.js.map": "/static/js/main.1c29d542.chunk.js.map",
+    "main.css": "/static/css/main.ea2cbfd1.chunk.css",
+    "main.js": "/static/js/main.ff84cf83.chunk.js",
+    "main.js.map": "/static/js/main.ff84cf83.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2fd7dc15.js",
     "runtime-main.js.map": "/static/js/runtime-main.2fd7dc15.js.map",
     "static/js/2.6a41b7b2.chunk.js": "/static/js/2.6a41b7b2.chunk.js",
     "static/js/2.6a41b7b2.chunk.js.map": "/static/js/2.6a41b7b2.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.12d9929b.chunk.css.map": "/static/css/main.12d9929b.chunk.css.map",
+    "static/css/main.ea2cbfd1.chunk.css.map": "/static/css/main.ea2cbfd1.chunk.css.map",
     "static/js/2.6a41b7b2.chunk.js.LICENSE.txt": "/static/js/2.6a41b7b2.chunk.js.LICENSE.txt",
+    "static/media/CV.ee06ebdb.pdf": "/static/media/CV.ee06ebdb.pdf",
     "static/media/bluedot.a9038f0b.png": "/static/media/bluedot.a9038f0b.png",
     "static/media/delilah.8d6dcbb9.png": "/static/media/delilah.8d6dcbb9.png",
     "static/media/egeria.7dd8615a.jpg": "/static/media/egeria.7dd8615a.jpg",
@@ -25,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.2fd7dc15.js",
     "static/js/2.6a41b7b2.chunk.js",
-    "static/css/main.12d9929b.chunk.css",
-    "static/js/main.1c29d542.chunk.js"
+    "static/css/main.ea2cbfd1.chunk.css",
+    "static/js/main.ff84cf83.chunk.js"
   ]
 }
