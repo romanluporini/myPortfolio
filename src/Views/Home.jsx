@@ -3,8 +3,8 @@ import Nav from "../components/Nav";
 import Scroll from "../components/Scroll";
 import TypeWriter from '../components/TypeWriter'
 import { Button } from '@material-ui/core';
-import homeBg from '../Assets/Images/home-bg.jpg'
 import useWindowDimensions from '../Hooks/UseWindowDimensions'
+import homeBg from '../Assets/Images/home-bg.jpg'
 import '../Styles/3-layout/_home.scss'
 import '../Styles/2-base/_typography.scss'
 import '../Styles/1-components/_button.scss'

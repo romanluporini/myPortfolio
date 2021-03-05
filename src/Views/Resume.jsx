@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import Grid from '@material-ui/core/Grid';
 import Title from '../components/Title'
+import Modal from '../components/Modal'
 import { Button } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
-import '../Styles/3-layout/_resume.scss'
-import '../Styles/1-components/_button.scss'
-import Modal from '../components/Modal'
 import { downloadPDF } from '../Helpers/DownloadFiles'
 import FileToDownload from '../Assets/Resume/CV.pdf'
+import '../Styles/1-components/_button.scss'
+import '../Styles/3-layout/_resume.scss'
 
 function Resume() {
 

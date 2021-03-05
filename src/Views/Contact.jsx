@@ -1,6 +1,6 @@
 import React from 'react'
-import ContactForm from '../components/ContactForm'
 import Title from '../components/Title'
+import ContactForm from '../components/ContactForm'
 import { useInView } from 'react-intersection-observer';
 
 function Contact() {

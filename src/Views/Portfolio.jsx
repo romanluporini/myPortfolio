@@ -3,8 +3,8 @@ import Title from '../components/Title'
 import Card from '../components/Card'
 import Grid from '@material-ui/core/Grid';
 import useWindowDimensions from '../Hooks/UseWindowDimensions'
-import '../Styles/3-layout/_portfolio.scss'
 import { useInView } from 'react-intersection-observer';
+import '../Styles/3-layout/_portfolio.scss'
 
 function Portfolio() {
 

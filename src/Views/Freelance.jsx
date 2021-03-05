@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Title from '../components/Title'
 import Carousel from '../components/Carousel'
 import { Button } from '@material-ui/core'
-import '../Styles/1-components/_button.scss'
 import slide1 from '../Assets/Images/slide1.png'
 import slide2 from '../Assets/Images/slide2.svg'
 import slide3 from '../Assets/Images/slide3.svg'
+import '../Styles/1-components/_button.scss'
 import '../Styles/1-components/_carousel.scss'
 
 
