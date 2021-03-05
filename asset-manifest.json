@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.479ff1fb.chunk.css",
-    "main.js": "/static/js/main.f4235e0d.chunk.js",
-    "main.js.map": "/static/js/main.f4235e0d.chunk.js.map",
+    "main.css": "/static/css/main.213945a1.chunk.css",
+    "main.js": "/static/js/main.a5ba779b.chunk.js",
+    "main.js.map": "/static/js/main.a5ba779b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2fd7dc15.js",
     "runtime-main.js.map": "/static/js/runtime-main.2fd7dc15.js.map",
     "static/js/2.6a41b7b2.chunk.js": "/static/js/2.6a41b7b2.chunk.js",
     "static/js/2.6a41b7b2.chunk.js.map": "/static/js/2.6a41b7b2.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.479ff1fb.chunk.css.map": "/static/css/main.479ff1fb.chunk.css.map",
+    "static/css/main.213945a1.chunk.css.map": "/static/css/main.213945a1.chunk.css.map",
     "static/js/2.6a41b7b2.chunk.js.LICENSE.txt": "/static/js/2.6a41b7b2.chunk.js.LICENSE.txt",
     "static/media/CV.e04fca59.pdf": "/static/media/CV.e04fca59.pdf",
     "static/media/bluedot.a9038f0b.png": "/static/media/bluedot.a9038f0b.png",
@@ -28,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.2fd7dc15.js",
     "static/js/2.6a41b7b2.chunk.js",
-    "static/css/main.479ff1fb.chunk.css",
-    "static/js/main.f4235e0d.chunk.js"
+    "static/css/main.213945a1.chunk.css",
+    "static/js/main.a5ba779b.chunk.js"
   ]
 }
