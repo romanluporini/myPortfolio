@@ -37,7 +37,7 @@
     .menu-icon {
       color: $white;
     }
-    &__menu-list {
+    .nav__menu-list {
       @include display-flex($direction: row, $justify: space-around);
     }
   }

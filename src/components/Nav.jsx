@@ -17,12 +17,6 @@ function Nav(props) {
         <nav>
           <div className="nav__menu-list">
             {navLinks.map((view, key) => <a key={key} href={`#${view}`} className="nav__link">{view}</a>)}
-            {/* <a href="#home" className="nav__link">home</a>
-            <a href="#about" className="nav__link">about</a>
-            <a href="#freelance" className="nav__link">freelance</a>
-            <a href="#portfolio" className="nav__link">portfolio</a>
-            <a href="#resume" className="nav__link">resume</a>
-            <a href="#contact" className="nav__link">contact</a> */}
           </div>
         </nav>}
     </Fragment>
