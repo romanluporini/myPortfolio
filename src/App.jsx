@@ -41,11 +41,9 @@ function App() {
     }, 2500)
   }, [])
 
-
   return (
     <div className="App">
-      {spinner
-        ?
+      {spinner?
         <Fragment>
           <div className="loading-spinner">
             <div className="loading-spinner__box">

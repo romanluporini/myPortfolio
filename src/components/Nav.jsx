@@ -4,29 +4,27 @@ import { Fragment } from 'react'
 function Nav(props) {
 
   const [queryFlag, setQueryFlag] = useState()
+  const navLinks = ['home', 'about', 'freelance', 'portfolio', 'resume', 'contact']
 
   useEffect(() => {
-    if (props.queryFlag > 1024) {
-      return setQueryFlag(true)
-    } else {
-      return setQueryFlag(false)
-    }
+    if (props.queryFlag > 1024) return setQueryFlag(true)
+    return setQueryFlag(false)
   }, [props.queryFlag])
 
   return (
     <Fragment>
       {queryFlag &&
         <nav>
-          <div className="menu-list">
-            <a href="#home" className="link">home</a>
-            <a href="#about" className="link">about</a>
-            <a href="#freelance" className="link">freelance</a>
-            <a href="#portfolio" className="link">portfolio</a>
-            <a href="#resume" className="link">resume</a>
-            <a href="#contact" className="link">contact</a>
+          <div className="nav__menu-list">
+            {navLinks.map((view, key) => <a key={key} href={`#${view}`} className="nav__link">{view}</a>)}
+            {/* <a href="#home" className="nav__link">home</a>
+            <a href="#about" className="nav__link">about</a>
+            <a href="#freelance" className="nav__link">freelance</a>
+            <a href="#portfolio" className="nav__link">portfolio</a>
+            <a href="#resume" className="nav__link">resume</a>
+            <a href="#contact" className="nav__link">contact</a> */}
           </div>
-        </nav>
-      }
+        </nav>}
     </Fragment>
   )
 }

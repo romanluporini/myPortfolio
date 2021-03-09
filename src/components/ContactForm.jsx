@@ -10,10 +10,7 @@ function ContactForm(props) {
 
     const [showModal, setShowModal] = useState(false)
 
-    function openModal() {
-        setShowModal(prevState => !prevState)
-    }
-
+    const openModal = () => setShowModal(prevState => !prevState)
 
     // tengo que incorporar redux para poder cerrar y abrir el modal
 
@@ -22,7 +19,7 @@ function ContactForm(props) {
             noValidate
             autoComplete="off"
             className="contact__form"
-            onSubmit={SendEmail}
+            onSubmit={e => SendEmail(e)}
         >
             {showModal &&
                 <Modal
@@ -69,7 +66,7 @@ function ContactForm(props) {
                         color="secondary"
                         className={props.inView ? "button visible" : "button"}
                         type="submit"
-                        onClick={() => { openModal() }}
+                        onClick={() => openModal()}
                     >
                         <FontAwesomeIcon icon={faEnvelope} />
                         <a>

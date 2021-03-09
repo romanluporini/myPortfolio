@@ -4,8 +4,6 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { Grid } from '@material-ui/core'
 import ArrowButton from '../components/ArrowButton'
 
-
-
 function Footer() {
     return (
         <footer className="footer">

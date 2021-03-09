@@ -8,13 +8,7 @@ function Gallery(props) {
 
     const [galleryActive, setGalleryActive] = useState(false)
 
-    useEffect(() => {
-        if (props.gallerySrc) {
-            setGalleryActive(true)
-        } else {
-            setGalleryActive(false)
-        }
-    }, [props.gallerySrc])
+    useEffect(() => setGalleryActive(props.gallerySrc.lenght > 0) , [props.gallerySrc])
 
     return (
         <Fragment>

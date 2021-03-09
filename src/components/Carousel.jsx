@@ -5,7 +5,7 @@ import '../Styles/1-components/_carousel.scss'
 
 
 export default function freelanceCarousel(props) {
-    var items = [
+    const items = [
         {
             img: props.img.slide1,
             title: 'interactive prototyping',
@@ -32,9 +32,7 @@ export default function freelanceCarousel(props) {
                     </div>
                     <div className="slide__text">
                         <h4>{props.item.title}</h4>
-                        <p>
-                            {props.item.text}
-                        </p>
+                        <p>{props.item.text}</p>
                     </div>
                 </div>
             </Paper>
