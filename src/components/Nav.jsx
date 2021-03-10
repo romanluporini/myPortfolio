@@ -16,7 +16,15 @@ function Nav(props) {
       {queryFlag &&
         <nav className="nav">
           <div className="nav__menu-list">
-            {navLinks.map((view, key) => <a key={key} href={`#${view}`} className="nav__link">{view}</a>)}
+            {navLinks.map((view, key) =>
+              <a
+                key={key}
+                href={`#${view}`}
+                className="nav__link"
+              >
+                {view}
+              </a>)
+            }
           </div>
         </nav>}
     </Fragment>

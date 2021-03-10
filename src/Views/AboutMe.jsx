@@ -21,8 +21,8 @@ function AboutMe() {
                     Developer as well as I'm part-time freelancer.
                     <br/>
                     The most relevant technologies I use are:
-                    React-redux, JavaScript, MongoDB, CSS/Sass-SassCript (BEM - methodology), HTML5, GIT. Libraries/Modules like Express, Axios,
-                    bcrypt, JWT, just to name a few.
+                    React-redux, JavaScript, MongoDB, CSS/Sass-SassCript (BEM - methodology), HTML5, GIT. Modules like Express, Axios,
+                    bcrypt, Jason Web Token, just to name a few.
                 </p>
             </div>
         </div>

@@ -9,6 +9,7 @@ import '../Styles/3-layout/_portfolio.scss'
 function Portfolio() {
 
     const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true })
+    const projects = ["bluedot-podcast", "gifos", "delilah-resto", "egeria", "sentate"]
 
     //for queryFlag
     const { width } = useWindowDimensions()
@@ -29,71 +30,23 @@ function Portfolio() {
                     direction="column"
                     justify="center"
                 >
-                    <Grid
-                        item xs={12}
-                        className={
-                            inView
-                                ? "portfolio__cards-item visited"
-                                : "portfolio__cards-item"
-                        }
-                    >
-                        <Card
-                            title="bluedot-podcast"
-                            queryFlag={width}
-                        />
-                    </Grid>
-                    <Grid
-                        item xs={12}
-                        className={
-                            inView
-                                ? "portfolio__cards-item visited"
-                                : "portfolio__cards-item"
-                        }
-                    >
-                        <Card
-                            title="gifos"
-                            queryFlag={width}
-                        />
-                    </Grid>
-                    <Grid
-                        item xs={12}
-                        className={
-                            inView
-                                ? "portfolio__cards-item visited"
-                                : "portfolio__cards-item"
-                        }
-                    >
-                        <Card
-                            title="delilah-resto"
-                            queryFlag={width}
-                        />
-                    </Grid>
-                    <Grid
-                        item xs={12}
-                        className={
-                            inView
-                                ? "portfolio__cards-item visited"
-                                : "portfolio__cards-item"
-                        }
-                    >
-                        <Card
-                            title="egeria"
-                            queryFlag={width}
-                        />
-                    </Grid>
-                    <Grid
-                        item xs={12}
-                        className={
-                            inView
-                                ? "portfolio__cards-item visited"
-                                : "portfolio__cards-item"
-                        }
-                    >
-                        <Card
-                            title="sentate"
-                            queryFlag={width}
-                        />
-                    </Grid>
+                    {projects.map((project, key) =>
+                        <Grid
+                            key={key}
+                            item xs={12}
+                            className={
+                                inView
+                                    ? "portfolio__cards-item visited"
+                                    : "portfolio__cards-item"
+                            }
+                        >
+                            <Card
+                                key={key}
+                                title={project}
+                                queryFlag={width}
+                            />
+                        </Grid>
+                    )}
                 </Grid>
             </div >
         </div>
