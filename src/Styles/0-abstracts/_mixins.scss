@@ -82,8 +82,6 @@
     @if $padd-breakpoint == null {
       padding: $padding-value;
     } @else {
-      // If $fs-font-size is a key that exists in
-      // $fs-breakpoints, use the value
       @if map-has-key($padd-breakpoints, $padd-breakpoint) {
         $padd-breakpoint: map-get($padd-breakpoints, $padd-breakpoint);
       }

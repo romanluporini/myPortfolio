@@ -4,8 +4,6 @@
 .arrow-button {
   @include display-flex($width: 60px, $height: 60px);
   border-radius: 50%;
-  // background-color: $arrow-button;
-  // animation: jump 1s ease-out 6s 4 alternate backwards;
   svg {
     position: relative;
     top: 2px;
@@ -17,7 +15,6 @@
   }
   &:hover{
     cursor: pointer;
-    // background-color: adjust-hue($color: $arrow-button, $degrees: 5);
     svg{
       transition: 0.3s;
       width: 2em !important;
@@ -25,13 +22,3 @@
     }
   }
 }
-
-
-// @keyframes jump{
-//   0%{ transform: translateY(0px); }
-//   25%{ transform: translateY(20px); }
-//   50%{ transform: translateY(15px); }
-//   75% { transform: translateY(20px); }
-//   100% { transform: translateY(0px); }
-// }
-

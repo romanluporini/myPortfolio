@@ -24,7 +24,7 @@ function Home() {
       <div className="header-content">
         <TypeWriter/>
         <h4 className="header-content__subtitle">
-          My name is <span>Román Luporini</span>. I'm a <span> Full Stack Web Developer</span> based in
+          I'm a <span> Full Stack Web Developer</span> based in
           Argentina.
         </h4>
         <div className="buttons">

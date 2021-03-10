@@ -8,6 +8,6 @@
 .resume,
 .contact,
 .footer{
-    @include padding($padding-list, $breakpoints);
+    @include padding($padding-list);
 }
 

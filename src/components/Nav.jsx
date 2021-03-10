@@ -14,7 +14,7 @@ function Nav(props) {
   return (
     <Fragment>
       {queryFlag &&
-        <nav>
+        <nav className="nav">
           <div className="nav__menu-list">
             {navLinks.map((view, key) => <a key={key} href={`#${view}`} className="nav__link">{view}</a>)}
           </div>

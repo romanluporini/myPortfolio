@@ -24,9 +24,9 @@ class Card extends React.Component {
             title: props.title
         }
         this.handleClose = this.handleClose.bind(this)
-        this.handleClose = this.handleOpen.bind(this)
-        this.handleClose = this.cardType.bind(this)
-        this.handleClose = this.handleOnClick.bind(this)
+        this.handleOpen = this.handleOpen.bind(this)
+        this.cardType = this.cardType.bind(this)
+        this.handleOnClick = this.handleOnClick.bind(this)
     }
 
     //for the queryFlag

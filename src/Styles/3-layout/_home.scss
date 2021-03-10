@@ -30,14 +30,14 @@
       height: 100%;
     }
   }
-  nav {
+  .nav {
     @include display-flex($width: 60%, $direction: row, $justify: space-around);
     position: absolute;
     top: 20px;
     .menu-icon {
       color: $white;
     }
-    .nav__menu-list {
+    &__menu-list {
       @include display-flex($direction: row, $justify: space-around);
     }
   }

@@ -6,7 +6,7 @@ import { Button } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { downloadPDF } from '../Helpers/DownloadFiles'
-import FileToDownload from '../Assets/Resume/CV.pdf'
+import FileToDownload from '../Assets/Resume/CV Luporini - Full Stack Web Developer.pdf'
 import '../Styles/1-components/_button.scss'
 import '../Styles/3-layout/_resume.scss'
 
@@ -69,10 +69,10 @@ function Resume() {
                                 HTML, CSS/Sass-Sasscript, Javascript, nodeJS, SQL, visual basic(MS Excel macros).
                             </p>
                             <span>
-                                Frameworks/Libraries/Databases/Systems
+                                Frameworks/ Libraries/ Databases/ Systems
                             </span>
                             <p>
-                            React, Redux, Express.js, Sequelize, bcrypt, JSON Web Token, MongoDB, MySql, phpMyAdmin, VS code, Postman, Adobe XD.
+                                React, Redux, Express.js, Sequelize, bcrypt, JSON Web Token, MongoDB, MySql, phpMyAdmin, VS code, Postman, Adobe XD.
                             </p>
                             <span>
                                 English
@@ -97,10 +97,16 @@ function Resume() {
                                 UX/ UI desing and development of a travel booking platform.
                     </p>
                             <span>
-                                Heliconia Software | agosto/sept. 2020
+                                Heliconia Software | august/sept. 2020
                     </span>
                             <p>
                                 UX/ UI desing and development of an international e-commerce.
+                    </p>
+                            <span>
+                                Climatizadores SN S.A. | sept 2018/sept. 2020
+                    </span>
+                            <p>
+                                Head of the technical-administration office.
                     </p>
                         </div>
                     </div>
@@ -153,6 +159,10 @@ function Resume() {
                                 https://www.sentate.com.ar
                         </a>
                             <p>Ref: Iglesias, Marcos +54 9 3364 31-2887</p>
+                            <span>For more projects, you can checkout my github</span>
+                            <a href="https://github.com/romanluporini" target="_blank">
+                                https://github.com/romanluporini
+                        </a>
                         </div>
                     </div>
                 </Grid>
