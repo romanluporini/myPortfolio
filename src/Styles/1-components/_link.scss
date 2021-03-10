@@ -5,7 +5,7 @@
   position: relative;
   top: 20px;
   @include font($color: $nav-links, $weight:500, $transform: capitalize, $family: "poppins");
-  font-size: 1em;
+  font-size: 1.1em;
   text-decoration: none;
   filter: drop-shadow(1px 1px 1px #000);
   &:hover{
