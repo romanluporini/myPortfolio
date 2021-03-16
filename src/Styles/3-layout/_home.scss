@@ -22,7 +22,8 @@
       animation: opacityImg 1.5s ease 1 forwards;
     }
     &--filtered-layer {
-      background-color: rgba(0, 106, 255, 0.1);
+      // background-color: rgba(0, 106, 255, 0.1);
+      background-color: rgba(0, 106, 255, 0.7);
       position: absolute;
       top: 0;
       left: 0;
