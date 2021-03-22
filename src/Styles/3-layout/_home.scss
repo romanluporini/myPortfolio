@@ -7,7 +7,7 @@
 .home {
   @include display-flex($width: 100%, $height: 100vh);
   &__Bg {
-    @include display-flex($width:100%, $height: 100%);
+    @include display-flex($width: 100%, $height: 100%);
     position: absolute;
     top: 0;
     left: 0;
@@ -16,20 +16,32 @@
     &__img {
       object-fit: cover;
       object-position: center center;
-      width: 100%;
+      width: 315%;
       max-width: 1440px;
       height: 100%;
       animation: opacityImg 1.5s ease 1 forwards;
+      @include min-width(421px){
+        width: 250%;
+      }
+      @include big-phone{
+        width: 200%;
+      }
+      @include tablet{
+        width:120%;
+      }
+      @include netbook{
+        width: 105%;
+      }
     }
-    &--filtered-layer {
-      // background-color: rgba(0, 106, 255, 0.1);
-      background-color: rgba(0, 106, 255, 0.7);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+    // &--filtered-layer {
+    //   // background-color: rgba(0, 106, 255, 0.1);
+    //   background-color: rgba(0, 106, 255, 0.7);
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    // }
   }
   .nav {
     @include display-flex($width: 60%, $direction: row, $justify: space-around);
@@ -46,9 +58,12 @@
     @include display-flex;
     position: relative;
     bottom: 20px;
+    @include min-width(421px){
+      bottom: 75px;
+    }
     &__title {
       @include font(
-        $color: $h-title,
+        $color: $white,
         $weight: 700,
         $family: "poppins",
         $transform: none
@@ -57,6 +72,22 @@
       filter: drop-shadow(1px 1px 1px #000);
       display: inline-block;
       text-align: center;
+      background-color: black;
+      width: 100%;
+      height: 120px;
+      @include min-width(421px){
+        height: 70px;
+        padding: 6px 0;
+      }
+      @include big-phone {
+        max-width: max-content;
+      }
+      @include tablet{
+        min-height: 90px;
+      }
+      @include desktop{
+        min-height: 120px;
+      }
       span {
         color: white;
       }
@@ -71,15 +102,21 @@
       margin: 8px 0px 32px;
       filter: drop-shadow(3px 3px 1px #000);
       text-align: center;
+      @include min-width(421px){
+        margin: 8px 0px 16px;
+      }
     }
     .buttons {
       @include display-flex;
-      @include big-phone {
+      @include tablet {
         flex-direction: row;
       }
       .button {
         margin: 16px 8px;
-        min-width: max-content;
+        min-width: 200px;
+        @include tablet{
+          min-width: max-content;
+        }
       }
     }
   }
