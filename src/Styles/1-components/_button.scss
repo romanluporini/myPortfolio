@@ -3,7 +3,9 @@
 .button {
   border-radius: 40px !important;
   width: 200px !important;
+  .MuiButton-label,
   a {
+    display: block;
     text-decoration: none;
     color: $white;
     font-family: "poppins", sans-serif;
@@ -13,7 +15,10 @@
       text-transform: capitalize;
     }
   }
-  svg{
+  .MuiButton-label{
+    text-transform: capitalize;
+  }
+  svg {
     margin-right: 6px;
   }
 }

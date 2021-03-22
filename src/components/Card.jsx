@@ -1,16 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import projectImg1 from '../Assets/Images/bluedot.png';
-import projectImg2 from '../Assets/Images/gifos.png';
-import projectImg3 from '../Assets/Images/delilah.png';
-import projectImg4 from '../Assets/Images/egeria.jpg';
-import projectImg5 from '../Assets/Images/sentate.png';
+import React, { Fragment } from 'react'
 import { Button } from '@material-ui/core';
+import cardType from '../Helpers/Cards'
 import Gallery from '../components/Gallery'
-import '../Styles/1-components/_card.scss'
-import '../Styles/1-components/_button.scss'
-import { Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import '../Styles/1-components/_card.scss'
+import '../Styles/1-components/_button.scss'
 
 class Card extends React.Component {
     constructor(props) {
@@ -25,7 +20,6 @@ class Card extends React.Component {
         }
         this.handleClose = this.handleClose.bind(this)
         this.handleOpen = this.handleOpen.bind(this)
-        this.cardType = this.cardType.bind(this)
         this.handleOnClick = this.handleOnClick.bind(this)
     }
 
@@ -60,25 +54,9 @@ class Card extends React.Component {
 
     handleOnClick(e) {
         if (this.state.openBlank === "") { e.preventDefault() }
-        this.handleOpen(this.cardType(this.state.title).href)
+        this.handleOpen(cardType(this.state.title).href)
     }
 
-    cardType(cardTitle) {
-        switch (cardTitle) {
-            case 'bluedot-podcast':
-                return { title: 'Bluedot Podcast', shortText: 'Podcast playing site', text: 'Objectives: layout, styling and deploy of a static web page with embebed content.', note: '*Note: this is a non-commercial project', img: projectImg1, href: "https://luporinibluedotpodcast.netlify.app" }
-            case 'gifos':
-                return { title: 'GifOs', shortText: 'Enjoy best gifs and make your own!', text: "Objectives: GIPHY's API conection, API querying, light/dark theme change, javascript ES6 (async/await) and media devices conection.", note: '*Note: this is a non-commercial project', img: projectImg2, href: "https://romanluporini-gifos.netlify.app" }
-            case 'delilah-resto':
-                return { title: 'Delilah Resto', shortText: 'Restaurant order management', text: 'Objectives: API programming, SQL database creation and querying, user authentication with JWT, folder structure for project scaling.', note: '*Note: this is a non-commercial project', img: projectImg3, href: "https://github.com/romanluporini/DelilahResto---TPn3-Acamica" }
-            case 'egeria':
-                return { title: 'Egeria', shortText: 'International E-commerce', text: 'UX/UI design of international e-commerce', img: projectImg4, href: "https://egeriaonlinetesting.netlify.app" }
-            case 'sentate':
-                return { title: 'Sentate', shortText: 'travel booking platform', text: 'front-end development of a travel booking platform', img: projectImg5, href: "https://sentate.com.ar/" }
-            default:
-                break;
-        }
-    }
 
     render() {
         return (
@@ -98,7 +76,7 @@ class Card extends React.Component {
                 }
                 <div className="card">
                     <div className="card__img-wrapper">
-                        <img src={this.cardType(this.state.title).img} alt={this.cardType(this.state.title).title} className="card__img" />
+                        <img src={cardType(this.state.title).img} alt={cardType(this.state.title).title} className="card__img" />
                         <div className="card__button-box">
                             <Button variant="contained" color="secondary" className="button card__button">
                                 <a
@@ -115,13 +93,13 @@ class Card extends React.Component {
                         </div>
                     </div>
                     <div className="card__content">
-                        <h3 className="card__title">{this.cardType(this.state.title).title}</h3>
+                        <h3 className="card__title">{cardType(this.state.title).title}</h3>
                         <p>{this.state.queryFlag
-                            ? this.cardType(this.state.title).text
-                            : this.cardType(this.state.title).shortText
+                            ? cardType(this.state.title).text
+                            : cardType(this.state.title).shortText
                         }
                         </p>
-                        <p>{this.cardType(this.state.title).note}</p>
+                        <p>{cardType(this.state.title).note}</p>
                     </div>
                 </div>
             </Fragment>

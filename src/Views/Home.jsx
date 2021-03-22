@@ -4,7 +4,7 @@ import Scroll from "../components/Scroll";
 import TypeWriter from '../components/TypeWriter'
 import { Button } from '@material-ui/core';
 import useWindowDimensions from '../Hooks/UseWindowDimensions'
-import homeBg from '../Assets/Images/home-bg.jpg'
+import homeBg from '../Assets/Images/—Pngtree—laptop _5184713.png'
 import '../Styles/3-layout/_home.scss'
 import '../Styles/2-base/_typography.scss'
 import '../Styles/1-components/_button.scss'
@@ -18,7 +18,7 @@ function Home() {
     <div className="home" id="home">
       <div className="home__Bg">
         <img src={homeBg} alt="home-background" className="home__Bg__img"/>
-        <div className="home__Bg--filtered-layer"></div>
+        {/* <div className="home__Bg--filtered-layer"></div> */}
       </div>
       <Nav queryFlag={width}/>
       <div className="header-content">

@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Fragment } from 'react'
+import React from 'react'
 import '../Styles/1-components/_scroll.scss'
-
-
 
 function Scroll(props) {
 

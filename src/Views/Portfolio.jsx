@@ -9,7 +9,7 @@ import '../Styles/3-layout/_portfolio.scss'
 function Portfolio() {
 
     const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true })
-    const projects = ["bluedot-podcast", "gifos", "delilah-resto", "egeria", "sentate"]
+    const projects = ["bluedot-podcast", "gifos", "delilah-resto", "egeria", "sentate", "estudio-juridico"]
 
     //for queryFlag
     const { width } = useWindowDimensions()

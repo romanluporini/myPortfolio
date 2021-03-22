@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react'
+import React, { useState, useEffect, useRef, Fragment } from 'react'
 import Home from './Views/Home'
 import AboutMe from './Views/AboutMe'
 import Portfolio from './Views/Portfolio'
@@ -14,29 +14,28 @@ function App() {
 
   const [spinner, setSpinner] = useState(true)
   const [loading, setLoading] = useState('loading')
-
-  var counter = 0
-
-  function handleInterval() {
-    setInterval(() => {
-      if (counter === 0) {
-        counter++
-      } else if (counter === 1) {
-        counter++
-        setLoading('loading.')
-      } else if (counter === 2) {
-        counter++
-        setLoading('loading..')
-      } else {
-        counter = 0
-        setLoading('loading...')
-      }
-    }, 500)
-  }
+  const counter = useRef(0)
 
   useEffect(() => {
+    function handleInterval() {
+      setInterval(() => {
+        if (counter.current === 0) {
+          counter.current++
+        } else if (counter.current === 1) {
+          counter.current++
+          setLoading('loading.')
+        } else if (counter.current === 2) {
+          counter.current++
+          setLoading('loading..')
+        } else {
+          counter.current = 0
+          setLoading('loading...')
+        }
+      }, 500)
+    }  
     handleInterval()
     setTimeout(() => {
+      clearInterval(handleInterval())
       setSpinner(false)
     }, 2500)
   }, [])

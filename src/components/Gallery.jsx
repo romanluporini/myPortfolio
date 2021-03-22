@@ -29,12 +29,13 @@ function Gallery(props) {
                             {/* incorporar redux (ya instalado) */}
 
                             <div className="gallery__iframe">
-                                <a href={props.gallerySrc} target="_blank" className="iframe__external-link">
+                                <a href={props.gallerySrc} target="_blank" rel="noreferrer" className="iframe__external-link">
                                     <FontAwesomeIcon icon={faExternalLinkAlt} />
                                 </a>
                                 <iframe
                                     src={props.gallerySrc}
                                     frameBorder="0"
+                                    title={props.gallerySrc}
                                 >
                                     {/* {showWarnMessage &&
                                         <div className="iframe__gh-warn-msg-box">

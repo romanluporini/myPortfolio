@@ -18,10 +18,10 @@ function Footer() {
                     <ArrowButton scrollTo={'home'} />
                 </Grid>
                 <Grid item xs={12} className="footer__grid-item">
-                    <a href="https://github.com/romanluporini" target="_blank">
+                    <a href="https://github.com/romanluporini" rel="noreferrer" target="_blank">
                         <FontAwesomeIcon icon={faGithub} className="git-icon" />
                     </a>
-                    <a href="https://www.linkedin.com/in/romanluporini" target="_blank">
+                    <a href="https://www.linkedin.com/in/romanluporini" rel="noreferrer" target="_blank">
                         <FontAwesomeIcon icon={faLinkedin} className="li-icon" />
                     </a>
                 </Grid>

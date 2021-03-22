@@ -40,7 +40,7 @@ a{
   @include font-size($a-font-sizes);
 }
 
-.button a{
+.button a, .button .MuiButton-label{
   @include font-size($button-font-sizes);
 }
 

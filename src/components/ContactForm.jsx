@@ -29,7 +29,7 @@ function ContactForm(props) {
             }
             <Grid
                 container
-                spacing={0, 2}
+                spacing={2}
             >
                 <Grid
                     item
@@ -69,9 +69,9 @@ function ContactForm(props) {
                         onClick={() => openModal()}
                     >
                         <FontAwesomeIcon icon={faEnvelope} />
-                        <a>
+                        {/* <a href="/"> */}
                             send
-                        </a>
+                        {/* </a> */}
                     </Button>
                 </div>
             </Grid>

@@ -144,54 +144,18 @@
 }
 
 .visited {
-  &:nth-child(1) .card {
-    transform: translateX(0%);
-    transition-delay: 0.3s;
-    .card__content h3,
-    .card__content p {
-      transform: rotateX(0deg);
-      transition: transform 1s;
-      transition-delay: 1.2s;
-    }
-  }
-  &:nth-child(2) .card {
-    transform: translateX(0%);
-    transition-delay: 0.5s;
-    .card__content h3,
-    .card__content p {
-      transform: rotateX(0deg);
-      transition: transform 1s;
-      transition-delay: 1.4s;
-    }
-  }
-  &:nth-child(3) .card {
-    transform: translateX(0%);
-    transition-delay: 0.7s;
-    .card__content h3,
-    .card__content p {
-      transform: rotateX(0deg);
-      transition: transform 1s;
-      transition-delay: 1.6s;
-    }
-  }
-  &:nth-child(4) .card {
-    transform: translateX(0%);
-    transition-delay: 0.9s;
-    .card__content h3,
-    .card__content p {
-      transform: rotateX(0deg);
-      transition: transform 1s;
-      transition-delay: 1.8s;
-    }
-  }
-  &:nth-child(5) .card {
-    transform: translateX(0%);
-    transition-delay: 1.1s;
-    .card__content h3,
-    .card__content p {
-      transform: rotateX(0deg);
-      transition: transform 1s;
-      transition-delay: 2s;
+  $delay-accum: 0;
+  @for $i from 1 through 6{
+    &:nth-child(#{$i}) .card{
+      transform: translateX(0%);
+      transition-delay: 0.3s + $delay-accum;
+      .card__content h3,
+      .card__content p {
+        transform: rotateX(0deg);
+        transition: transform 1s;
+        transition-delay: 1.2s + $delay-accum;        
+      }  
+      $delay-accum: $delay-accum + 0.2s;
     }
   }
 }

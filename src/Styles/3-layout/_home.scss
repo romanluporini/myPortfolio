@@ -7,8 +7,7 @@
 .home {
   @include display-flex($width: 100%, $height: 100vh);
   &__Bg {
-    height: 100%;
-    width: 100%;
+    @include display-flex($width:100%, $height: 100%);
     position: absolute;
     top: 0;
     left: 0;
@@ -18,6 +17,7 @@
       object-fit: cover;
       object-position: center center;
       width: 100%;
+      max-width: 1440px;
       height: 100%;
       animation: opacityImg 1.5s ease 1 forwards;
     }

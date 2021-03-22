@@ -151,16 +151,16 @@ function Resume() {
                             <span>
                                 freelance
                     </span>
-                            <a href="https://egeriaonlinetesting.netlify.app" target="_blank">
+                            <a href="https://egeriaonlinetesting.netlify.app" rel="noreferrer" target="_blank">
                                 https://egeriaonlinetesting.netlify.app
                         </a>
                             <p>Ref: Rotondaro, Agustín +598 95 606 245</p>
-                            <a href="https://www.sentate.com.ar" target="_blank">
+                            <a href="https://www.sentate.com.ar" rel="noreferrer" target="_blank">
                                 https://www.sentate.com.ar
                         </a>
                             <p>Ref: Iglesias, Marcos +54 9 3364 31-2887</p>
                             <span>For more projects, you can checkout my github</span>
-                            <a href="https://github.com/romanluporini" target="_blank">
+                            <a href="https://github.com/romanluporini" rel="noreferrer" target="_blank">
                                 https://github.com/romanluporini
                         </a>
                         </div>
@@ -175,15 +175,12 @@ function Resume() {
                             variant="contained"
                             color="secondary"
                             className="button"
+                            onClick={() => {
+                                openModal()
+                            }}
                         >
                             <FontAwesomeIcon icon={faDownload} />
-                            <a
-                                onClick={() => {
-                                    openModal()
-                                }}
-                            >
                                 resume
-                            </a>
                         </Button>
                     </div>
                 </Grid>

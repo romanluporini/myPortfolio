@@ -54,9 +54,9 @@ function Modal(props) {
                                                 handleClose(e)
                                             }}
                                         >
-                                        <a>
+                                        {/* <a> */}
                                             {props.from === "resume" ? "retry" : "ok"}
-                                        </a>
+                                        {/* </a> */}
                                         </Button>}
                                 </div>
                             </div>
