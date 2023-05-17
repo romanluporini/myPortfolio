@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://romanluporini.com",
+  "homepage": "https://romanluporini.github.io",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
@@ -29,7 +29,7 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "predeploy": "npm run build && echo romanluporini.com > ./build/CNAME",
+    "predeploy": "npm run build && echo romanluporini.github.io > ./build/CNAME",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
